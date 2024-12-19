@@ -28,4 +28,32 @@ color = "Red"
 position = Vector2(616, 274)
 color = "White"
 
+[node name="3" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(406, 154)
+color = "White"
+
+[node name="4" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(181, 181)
+color = "White"
+
+[node name="5" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(60, 52)
+color = "White"
+
+[node name="6" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(598, 56)
+color = "White"
+
+[node name="7" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(251, 39)
+color = "White"
+
+[node name="8" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(253, 303)
+color = "White"
+
+[node name="9" parent="Presents" instance=ExtResource("3_ppwu8")]
+position = Vector2(478, 42)
+color = "White"
+
 [node name="MinigameLayer" type="Node" parent="."]
