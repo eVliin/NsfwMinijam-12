@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0rpqfg4fhebk"
-path="res://.godot/imported/next.svg-c37f62dfc695839ffa3eb84b6f2a40c8.ctex"
+path="res://.godot/imported/next.svg-689f85597f487815b8ddefa23d22bf6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg"
-dest_files=["res://.godot/imported/next.svg-c37f62dfc695839ffa3eb84b6f2a40c8.ctex"]
+source_file="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg"
+dest_files=["res://.godot/imported/next.svg-689f85597f487815b8ddefa23d22bf6f.ctex"]
 
 [params]
 

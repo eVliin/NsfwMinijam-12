@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxpesy6bfx0bi"]
+
+[ext_resource type="PackedScene" uid="uid://cyfwmk2n8dtlv" path="res://Assets/PLaceholder/present/Pull_L.glb" id="1_pt1bv"]
+
+[node name="Pull_L" instance=ExtResource("1_pt1bv")]
+
+[node name="Noh_002" parent="." index="0"]
+cast_shadow = 2

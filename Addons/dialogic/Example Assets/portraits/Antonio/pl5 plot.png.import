@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1k1be4cqjj4t"
-path="res://.godot/imported/pl5 plot.png-98507d47bfd8d6cd1f8335d92f5c4cf2.ctex"
+path="res://.godot/imported/pl5 plot.png-7c5bbb51327eb4b7b1b78f4597ed6c60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Example Assets/portraits/Antonio/pl5 plot.png"
-dest_files=["res://.godot/imported/pl5 plot.png-98507d47bfd8d6cd1f8335d92f5c4cf2.ctex"]
+source_file="res://addons/dialogic/Example Assets/portraits/Antonio/pl5 plot.png"
+dest_files=["res://.godot/imported/pl5 plot.png-7c5bbb51327eb4b7b1b78f4597ed6c60.ctex"]
 
 [params]
 

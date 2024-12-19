@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb3tpn3u3wtis"
-path="res://.godot/imported/pl3 avoid.png-fb0a99b387e0929caeabced4ded0ed8c.ctex"
+path="res://.godot/imported/pl3 avoid.png-f8f5fd2a91f270ef9417e3b4bda0f35d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Example Assets/portraits/Jane/pl3 avoid.png"
-dest_files=["res://.godot/imported/pl3 avoid.png-fb0a99b387e0929caeabced4ded0ed8c.ctex"]
+source_file="res://addons/dialogic/Example Assets/portraits/Jane/pl3 avoid.png"
+dest_files=["res://.godot/imported/pl3 avoid.png-f8f5fd2a91f270ef9417e3b4bda0f35d.ctex"]
 
 [params]
 

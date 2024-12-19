@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgx0ejya2mtmn"
-path="res://.godot/imported/textbox_layer_icon.svg-8a0b587e0bee343d46ce54925b6a7edb.ctex"
+path="res://.godot/imported/textbox_layer_icon.svg-d6678fedd53dcb59cc32e1c443754ad5.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/textbox_layer_icon.svg"
-dest_files=["res://.godot/imported/textbox_layer_icon.svg-8a0b587e0bee343d46ce54925b6a7edb.ctex"]
+source_file="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/textbox_layer_icon.svg"
+dest_files=["res://.godot/imported/textbox_layer_icon.svg-d6678fedd53dcb59cc32e1c443754ad5.ctex"]
 
 [params]
 

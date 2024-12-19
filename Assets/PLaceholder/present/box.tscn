@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca0h1en8yxgif"]
+
+[ext_resource type="PackedScene" uid="uid://n152d1rdh0xc" path="res://Assets/PLaceholder/present/Box.glb" id="1_um8hc"]
+
+[node name="Box" instance=ExtResource("1_um8hc")]
+
+[node name="Caixa" parent="." index="0"]
+cast_shadow = 2

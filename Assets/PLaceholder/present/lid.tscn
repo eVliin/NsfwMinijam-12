@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bciqfvjrc5o57"]
+
+[ext_resource type="PackedScene" uid="uid://c1am8b25sagvc" path="res://Assets/PLaceholder/present/Lid.glb" id="1_llpls"]
+
+[node name="Lid" instance=ExtResource("1_llpls")]
+
+[node name="Tampa" parent="." index="0"]
+cast_shadow = 2
