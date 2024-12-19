@@ -1,27 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://crwt5jo6i37u8"]
+[gd_scene load_steps=3 format=3 uid="uid://crwt5jo6i37u8"]
 
-[ext_resource type="PackedScene" uid="uid://b0rpug8oir2ks" path="res://Scenes/Entities/Present/present.tscn" id="1_2vxt6"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Present/minigame_present.gd" id="1_dc6tb"]
-[ext_resource type="Script" path="res://Scenes/Entities/Present/present.gd" id="3_ru3o6"]
+[ext_resource type="PackedScene" uid="uid://p6rc6w4rsgu3" path="res://Scenes/Minigames/Present/3dMinigamePresent.tscn" id="2_i4rp7"]
 
-[node name="MinigamePresent" type="Node3D"]
+[node name="MinigamePresent" type="Node2D" groups=["Minigames"]]
+visible = false
 script = ExtResource("1_dc6tb")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.44717)
-current = true
-fov = 38.1731
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -5.74039, 5.54499, 5.74328)
-light_volumetric_fog_energy = 0.0
-shadow_enabled = true
-directional_shadow_mode = 1
-directional_shadow_split_1 = 0.394
-directional_shadow_fade_start = 1.0
-directional_shadow_max_distance = 19.0
-directional_shadow_pancake_size = 0.1
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+physics_object_picking = true
+size = Vector2i(640, 360)
+size_2d_override = Vector2i(640, 360)
+render_target_update_mode = 0
 
-[node name="Present" parent="." instance=ExtResource("1_2vxt6")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-script = ExtResource("3_ru3o6")
+[node name="Node3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_i4rp7")]

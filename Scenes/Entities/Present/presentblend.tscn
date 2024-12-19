@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://qolg1fm88h4o"]
-
-[ext_resource type="PackedScene" uid="uid://cgcuq8kmmwvb0" path="res://Assets/PLaceholder/present/Present.blend" id="1_33vwd"]
-
-[node name="Present" instance=ExtResource("1_33vwd")]
