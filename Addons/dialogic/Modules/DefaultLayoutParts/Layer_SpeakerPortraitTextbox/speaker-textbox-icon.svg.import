@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0v3akss47tgy"
-path="res://.godot/imported/speaker-textbox-icon.svg-d3cbd9a790ae6efcf0c4d676042872d5.ctex"
+path="res://.godot/imported/speaker-textbox-icon.svg-e67964032c31cfdc4bf5a376d48a985e.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/speaker-textbox-icon.svg"
-dest_files=["res://.godot/imported/speaker-textbox-icon.svg-d3cbd9a790ae6efcf0c4d676042872d5.ctex"]
+source_file="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/speaker-textbox-icon.svg"
+dest_files=["res://.godot/imported/speaker-textbox-icon.svg-e67964032c31cfdc4bf5a376d48a985e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u0o8qgccs5df"
-path="res://.godot/imported/next-indicator.png-fa3a712ec86887876480d1eb685d313e.ctex"
+path="res://.godot/imported/next-indicator.png-e3b7b80d9da791a1d0a061a728b6f781.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Example Assets/next-indicator/next-indicator.png"
-dest_files=["res://.godot/imported/next-indicator.png-fa3a712ec86887876480d1eb685d313e.ctex"]
+source_file="res://addons/dialogic/Example Assets/next-indicator/next-indicator.png"
+dest_files=["res://.godot/imported/next-indicator.png-e3b7b80d9da791a1d0a061a728b6f781.ctex"]
 
 [params]
 

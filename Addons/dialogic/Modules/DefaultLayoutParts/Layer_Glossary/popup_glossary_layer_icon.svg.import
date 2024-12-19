@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3q86ma7r6l57"
-path="res://.godot/imported/popup_glossary_layer_icon.svg-9472e297eec8c278dd7b2a5d60308172.ctex"
+path="res://.godot/imported/popup_glossary_layer_icon.svg-4af96bdb70714a5289a4ffe42cf8f357.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/popup_glossary_layer_icon.svg"
-dest_files=["res://.godot/imported/popup_glossary_layer_icon.svg-9472e297eec8c278dd7b2a5d60308172.ctex"]
+source_file="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/popup_glossary_layer_icon.svg"
+dest_files=["res://.godot/imported/popup_glossary_layer_icon.svg-4af96bdb70714a5289a4ffe42cf8f357.ctex"]
 
 [params]
 

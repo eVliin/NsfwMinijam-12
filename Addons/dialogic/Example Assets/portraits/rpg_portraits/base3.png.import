@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vtajb1cdcso"
-path="res://.godot/imported/base3.png-93e0d1412e1dfcbf069e0a03dd367815.ctex"
+path="res://.godot/imported/base3.png-65e60d03716a9b546a46a38772fc2ace.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Example Assets/portraits/rpg_portraits/base3.png"
-dest_files=["res://.godot/imported/base3.png-93e0d1412e1dfcbf069e0a03dd367815.ctex"]
+source_file="res://addons/dialogic/Example Assets/portraits/rpg_portraits/base3.png"
+dest_files=["res://.godot/imported/base3.png-65e60d03716a9b546a46a38772fc2ace.ctex"]
 
 [params]
 

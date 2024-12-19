@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qihj11n7kx3m"
-path="res://.godot/imported/simple_image_portrait_thumbnail.png-6eb37c2267b2292eb9d3c4e496fb9006.ctex"
+path="res://.godot/imported/simple_image_portrait_thumbnail.png-3d6c6de8187fd7911017e2ef9d3c40a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Modules/Character/simple_image_portrait_thumbnail.png"
-dest_files=["res://.godot/imported/simple_image_portrait_thumbnail.png-6eb37c2267b2292eb9d3c4e496fb9006.ctex"]
+source_file="res://addons/dialogic/Modules/Character/simple_image_portrait_thumbnail.png"
+dest_files=["res://.godot/imported/simple_image_portrait_thumbnail.png-3d6c6de8187fd7911017e2ef9d3c40a4.ctex"]
 
 [params]
 

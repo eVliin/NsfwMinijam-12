@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ryu3i2tv5xg8"
-path="res://.godot/imported/preview.png-5bf4a6d28501fe5a09f8bafbe43d408b.ctex"
+path="res://.godot/imported/preview.png-566f98d1e24a8b079521a4925ee523c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/dialogic/Modules/DefaultLayoutParts/Style_TextBubbles/preview.png"
-dest_files=["res://.godot/imported/preview.png-5bf4a6d28501fe5a09f8bafbe43d408b.ctex"]
+source_file="res://addons/dialogic/Modules/DefaultLayoutParts/Style_TextBubbles/preview.png"
+dest_files=["res://.godot/imported/preview.png-566f98d1e24a8b079521a4925ee523c7.ctex"]
 
 [params]
 
