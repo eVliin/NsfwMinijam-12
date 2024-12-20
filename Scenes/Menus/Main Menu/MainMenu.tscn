@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ggow5ddllgga"]
+[gd_scene load_steps=3 format=3 uid="uid://ggow5ddllgga"]
 
 [ext_resource type="Texture2D" uid="uid://8u5vthp8lu5e" path="res://Assets/PLaceholder/titlemockup.png" id="1_gl3g7"]
+[ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_hgnt5"]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_hgnt5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 640.0
@@ -24,3 +26,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_right = 130
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme_override_constants/separation = 25
+alignment = 2
+
+[node name="New game" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "New game"
+
+[node name="Continue" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Settings" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/New game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
