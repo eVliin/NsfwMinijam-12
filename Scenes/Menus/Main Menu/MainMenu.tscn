@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://8u5vthp8lu5e" path="res://Assets/PLaceholder/titlemockup.png" id="1_gl3g7"]
 [ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_hgnt5"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_hgnt5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
