@@ -13,7 +13,10 @@ func _ready() -> void:
 	Global.game_controller = self
 	current_gui_scene = $GUI/SplashScreenManager
 
-func change_gui_scene(new_scene: String, delete:bool = true, keep_running: bool = false) -> void:
+func change_gui_scene(new_scene: String, transition: bool = false, delete:bool = true, keep_running: bool = false) -> void:
+	if transition:
+		$LoadManager.transition_to()
+		await transitioned_in
 	if current_gui_scene != null:
 		if delete:
 			current_gui_scene.queue_free()
@@ -24,6 +27,8 @@ func change_gui_scene(new_scene: String, delete:bool = true, keep_running: bool 
 	var new = load(new_scene).instantiate()
 	gui.add_child(new)
 	current_gui_scene = new
+	if transition:
+		$LoadManager.transition_out()
 
 func change_2d_scene(new_scene: String, delete:bool = true, keep_running: bool = false) -> void:
 	$LoadManager.transition_to()
