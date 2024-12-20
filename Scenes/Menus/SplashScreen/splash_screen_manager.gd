@@ -27,4 +27,4 @@ func fade():
 		tween.tween_property(screen, "modulate:a", 0.0, fade_out_time)
 		tween.tween_interval(out_time)
 		await tween.finished
-	Global.game_controller.change_gui_scene(Global.MAIN_MENU)
+	Global.game_controller.change_gui_scene(Global.MAIN_MENU, true)

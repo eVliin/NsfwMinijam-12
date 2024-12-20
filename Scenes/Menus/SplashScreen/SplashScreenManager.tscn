@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://f114i1ajry73"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/SplashScreen/splash_screen_manager.gd" id="1_n63pn"]
-[ext_resource type="Texture2D" uid="uid://b3omq2goggn6s" path="res://Assets/PLaceholder/present/texture.png" id="2_jgemk"]
+[ext_resource type="Texture2D" uid="uid://bcejvleblxh6m" path="res://Assets/UI/Splashscreen/Illustration17clip.png" id="2_j545q"]
 
 [node name="SplashScreenManager" type="Control" node_paths=PackedStringArray("splash_screen_container")]
 layout_mode = 3
@@ -30,6 +30,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Texture" type="TextureRect" parent="CenterContainer"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
 layout_mode = 2
-texture = ExtResource("2_jgemk")
+texture = ExtResource("2_j545q")

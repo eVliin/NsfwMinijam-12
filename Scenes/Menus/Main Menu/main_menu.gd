@@ -7,8 +7,8 @@ func _ready() -> void:
 
 
 func _on_new_game_pressed() -> void:
-	
 	Global.game_controller.change_2d_scene(Global.TEST_ROOM)
+	await Global.game_controller.change_2d_scene(Global.TEST_ROOM)
 	Global.game_controller.change_gui_scene(Global.HUD)
 
 

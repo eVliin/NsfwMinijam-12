@@ -250,4 +250,5 @@ parameters/looping = true
 [node name="Sfx" type="AudioStreamPlayer" parent="."]
 bus = &"Sfx"
 
+[connection signal="animation_finished" from="LoadManager/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="LoadManager/AnimationPlayer" to="LoadManager" method="_on_animation_player_animation_finished"]
