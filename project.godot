@@ -13,6 +13,10 @@ config_version=5
 config/name="New Game Project"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0.0509804, 0.0509804, 0.0509804, 1)
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,6 +24,7 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://Autoload/Global.gd"
 SignalBus="*res://Autoload/SignalBus.gd"
+SceneManager="*res://Autoload/SceneManager/scene_manager.tscn"
 
 [dialogic]
 
