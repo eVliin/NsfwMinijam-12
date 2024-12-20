@@ -1,31 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0rpug8oir2ks"]
+[gd_scene load_steps=4 format=3 uid="uid://dh0cmr7025dom"]
 
-[ext_resource type="PackedScene" uid="uid://ca0h1en8yxgif" path="res://Assets/PLaceholder/present/box.tscn" id="1_t001j"]
-[ext_resource type="PackedScene" uid="uid://yvsg8inicp6" path="res://Assets/PLaceholder/present/knot.tscn" id="3_irktt"]
-[ext_resource type="PackedScene" uid="uid://bciqfvjrc5o57" path="res://Assets/PLaceholder/present/lid.tscn" id="3_ujyks"]
-[ext_resource type="PackedScene" uid="uid://byynyra6i8w1e" path="res://Assets/PLaceholder/present/pull.tscn" id="4_w0wux"]
-[ext_resource type="PackedScene" uid="uid://cxpesy6bfx0bi" path="res://Assets/PLaceholder/present/pull_l.tscn" id="5_rulds"]
-[ext_resource type="PackedScene" uid="uid://ddxi1mjqnilv7" path="res://Assets/PLaceholder/present/ribbon.tscn" id="6_bkdqc"]
-[ext_resource type="PackedScene" uid="uid://bi6apvs1q888d" path="res://Assets/PLaceholder/present/ribbon_l.tscn" id="7_pl8am"]
+[ext_resource type="Script" path="res://Scenes/Entities/Present/present.gd" id="1_78ld1"]
+[ext_resource type="Texture2D" uid="uid://b3omq2goggn6s" path="res://Assets/PLaceholder/present/texture.png" id="1_vakov"]
 
-[node name="Present" type="Node3D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oau5n"]
+size = Vector2(116, 106)
 
-[node name="Box" parent="." instance=ExtResource("1_t001j")]
+[node name="Present" type="Node2D"]
+script = ExtResource("1_78ld1")
+color = "Blue"
 
-[node name="Lid" parent="." instance=ExtResource("3_ujyks")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, -0.006)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_vakov")
 
-[node name="Knot" parent="." instance=ExtResource("3_irktt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.161)
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="Pull" parent="." instance=ExtResource("4_w0wux")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.162)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_oau5n")
 
-[node name="Pull_L" parent="." instance=ExtResource("5_rulds")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.162)
-
-[node name="Ribbon" parent="." instance=ExtResource("6_bkdqc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.162)
-
-[node name="Ribbon_L" parent="." instance=ExtResource("7_pl8am")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.162)
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

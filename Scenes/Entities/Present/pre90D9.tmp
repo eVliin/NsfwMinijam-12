@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh0cmr7025dom"]
+
+[ext_resource type="Script" path="res://Scenes/Entities/Present/present.gd" id="1_78ld1"]
+[ext_resource type="Texture2D" uid="uid://b3omq2goggn6s" path="res://Assets/PLaceholder/present/texture.png" id="1_vakov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oau5n"]
+size = Vector2(116, 106)
+
+[node name="Present" type="Node2D"]
+script = ExtResource("1_78ld1")
+color = "Blue"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_vakov")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_oau5n")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
