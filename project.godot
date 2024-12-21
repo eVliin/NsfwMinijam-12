@@ -28,10 +28,13 @@ SignalBus="*res://Autoload/SignalBus.gd"
 
 directories/dch_directory={
 "Chris": "res://Assets/Characters/Chris/Chris.dch",
-"Mary": "res://Assets/Characters/Mary/Mary.dch"
+"Chris/Chris": "res://assets/Characters/Chris/Chris.dch",
+"Mary": "res://Assets/Characters/Mary/Mary.dch",
+"Mary/Mary": "res://assets/Characters/Mary/Mary.dch"
 }
 directories/dtl_directory={
-"TestDialogue": "res://Scenes/Rooms/TestRoom/TestDialogue.dtl"
+"TestDialogue": "res://Scenes/Rooms/TestRoom/TestDialogue.dtl",
+"TestRoom/TestDialogue": "res://scenes/Rooms/TestRoom/TestDialogue.dtl"
 }
 variables={
 "Global.player_has_control": false

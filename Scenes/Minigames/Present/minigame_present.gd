@@ -21,13 +21,13 @@ func _ready() -> void:
 func _opened(ID):
 	if ID.to_int() == id:
 		_id = ID.to_int()
-		visible = not visible
+		visible = true
 		set_process_input(true)
 
 func _closed():
 	if _id == id:
-		visible = not visible
-		SignalBus.pop_close.emit()
 		_id = -1
+		visible = false
+		SignalBus.pop_close.emit()
 		set_process_input(false)
 		print(is_processing_input())

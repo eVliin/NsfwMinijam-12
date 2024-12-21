@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnwntxm0mqao8"
-path="res://.godot/imported/Ribbon.glb-ece6e635d7305a984773d03a21656c46.scn"
+path="res://.godot/imported/Ribbon.glb-33e6b362468bea03016e6c50cba3dbac.scn"
 
 [deps]
 
-source_file="res://Assets/PLaceholder/present/Ribbon.glb"
-dest_files=["res://.godot/imported/Ribbon.glb-ece6e635d7305a984773d03a21656c46.scn"]
+source_file="res://assets/PLaceholder/present/Ribbon.glb"
+dest_files=["res://.godot/imported/Ribbon.glb-33e6b362468bea03016e6c50cba3dbac.scn"]
 
 [params]
 

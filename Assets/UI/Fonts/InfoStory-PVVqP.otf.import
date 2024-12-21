@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d1qgulflobv4"
-path="res://.godot/imported/InfoStory-PVVqP.otf-5333d8a57a8d13afbc7fe251c5210539.fontdata"
+path="res://.godot/imported/InfoStory-PVVqP.otf-c6e4ee4d5ff91991a3b44300ef34f973.fontdata"
 
 [deps]
 
-source_file="res://Assets/UI/Fonts/InfoStory-PVVqP.otf"
-dest_files=["res://.godot/imported/InfoStory-PVVqP.otf-5333d8a57a8d13afbc7fe251c5210539.fontdata"]
+source_file="res://assets/UI/Fonts/InfoStory-PVVqP.otf"
+dest_files=["res://.godot/imported/InfoStory-PVVqP.otf-c6e4ee4d5ff91991a3b44300ef34f973.fontdata"]
 
 [params]
 
