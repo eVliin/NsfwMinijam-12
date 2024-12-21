@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://4nqj6x1h17s2"]
+[gd_scene load_steps=12 format=3 uid="uid://4nqj6x1h17s2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l3pd1"]
 [ext_resource type="PackedScene" uid="uid://f114i1ajry73" path="res://Scenes/Menus/SplashScreen/SplashScreenManager.tscn" id="2_bhs38"]
-[ext_resource type="AudioStream" uid="uid://deuwe5igu306i" path="res://Assets/Audio/Music/Myuu-Last-Christmas-Sad-Piano-Version.mp3" id="2_t3ufa"]
 [ext_resource type="Script" path="res://Autoload/SceneManager/scene_manager.gd" id="3_4ejcn"]
 [ext_resource type="Shader" path="res://Assets/Shaders/horizontal_split.gdshader" id="4_gccw1"]
 
@@ -195,6 +194,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="SplashScreenManager" parent="GUI" instance=ExtResource("2_bhs38")]
 layout_mode = 1
@@ -241,14 +241,6 @@ uppercase = true
 libraries = {
 "": SubResource("AnimationLibrary_o4etp")
 }
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_t3ufa")
-bus = &"Music"
-parameters/looping = true
-
-[node name="Sfx" type="AudioStreamPlayer" parent="."]
-bus = &"Sfx"
 
 [connection signal="animation_finished" from="LoadManager/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="LoadManager/AnimationPlayer" to="LoadManager" method="_on_animation_player_animation_finished"]

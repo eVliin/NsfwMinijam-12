@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://sysk0xcl723a"]
+
+[resource]
+blend_mode = 4
+cull_mode = 2
+depth_draw_mode = 1
+albedo_color = Color(0.282353, 0.788235, 0.843137, 1)
+ao_enabled = true
