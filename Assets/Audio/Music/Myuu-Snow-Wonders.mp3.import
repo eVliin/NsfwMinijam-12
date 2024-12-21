@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bjur1k8arhxp0"
-path="res://.godot/imported/Myuu-Snow-Wonders.mp3-9d55390f11d28996f034f1c0a7c88541.mp3str"
+path="res://.godot/imported/Myuu-Snow-Wonders.mp3-ae89590c337222f30ba144955169cd6b.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/Music/Myuu-Snow-Wonders.mp3"
-dest_files=["res://.godot/imported/Myuu-Snow-Wonders.mp3-9d55390f11d28996f034f1c0a7c88541.mp3str"]
+source_file="res://Assets/Audio/Music/Myuu-Snow-Wonders.mp3"
+dest_files=["res://.godot/imported/Myuu-Snow-Wonders.mp3-ae89590c337222f30ba144955169cd6b.mp3str"]
 
 [params]
 

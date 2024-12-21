@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ge3xt1fdiibt"
-path="res://.godot/imported/Myuu-Jingle-Bells-Dark-Piano-Version.mp3-d7587075eb117506908a93adb1a2e615.mp3str"
+path="res://.godot/imported/Myuu-Jingle-Bells-Dark-Piano-Version.mp3-2e4b25ab5a28e6d78f63543cf9ce2916.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/Music/Myuu-Jingle-Bells-Dark-Piano-Version.mp3"
-dest_files=["res://.godot/imported/Myuu-Jingle-Bells-Dark-Piano-Version.mp3-d7587075eb117506908a93adb1a2e615.mp3str"]
+source_file="res://Assets/Audio/Music/Myuu-Jingle-Bells-Dark-Piano-Version.mp3"
+dest_files=["res://.godot/imported/Myuu-Jingle-Bells-Dark-Piano-Version.mp3-2e4b25ab5a28e6d78f63543cf9ce2916.mp3str"]
 
 [params]
 

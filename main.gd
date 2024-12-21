@@ -9,9 +9,12 @@ signal transitioned_out()
 var current_2d_scene
 var current_gui_scene
 
+const MOUSESELECT = preload("res://Assets/UI/mouseselect.png")
+
 func _ready() -> void:
 	Global.game_controller = self
 	current_gui_scene = $GUI/SplashScreenManager
+	Input.set_custom_mouse_cursor(MOUSESELECT, Input.CURSOR_POINTING_HAND)
 
 func change_gui_scene(new_scene: String, transition: bool = false, delete:bool = true, keep_running: bool = false) -> void:
 	if transition:

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ggow5ddllgga"]
+[gd_scene load_steps=6 format=3 uid="uid://ggow5ddllgga"]
 
 [ext_resource type="Texture2D" uid="uid://8u5vthp8lu5e" path="res://Assets/PLaceholder/titlemockup.png" id="1_gl3g7"]
 [ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_hgnt5"]
+[ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="3_smrde"]
+[ext_resource type="Script" path="res://Scenes/Menus/Main Menu/button.gd" id="4_4g04n"]
+[ext_resource type="Script" path="res://scenes/Menus/Main Menu/button.gd" id="5_vbyp8"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -14,91 +17,87 @@ offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("1_gl3g7")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
+[node name="Container" type="Control" parent="."]
+layout_mode = 2
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 360.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="New game" type="Button" parent="Container"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 375.314
+offset_top = 129.097
+offset_right = -68.6859
+offset_bottom = -166.903
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Container" type="Control" parent="Control/MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Container"]
-layout_mode = 2
-offset_left = 433.0
-offset_top = 157.0
-offset_right = 510.0
-offset_bottom = 341.0
-rotation = 0.471239
-size_flags_horizontal = 10
-size_flags_vertical = 8
-theme_override_constants/separation = 59
-alignment = 2
-
-[node name="Control" type="Control" parent="Control/MarginContainer/Container/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="New game" type="Button" parent="Control/MarginContainer/Container/VBoxContainer/Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.471239
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../Continue")
+focus_next = NodePath("../Continue")
+focus_previous = NodePath("../Exit")
+theme = ExtResource("3_smrde")
 text = "New game"
+script = ExtResource("4_4g04n")
 
-[node name="Control2" type="Control" parent="Control/MarginContainer/Container/VBoxContainer"]
-layout_mode = 2
-
-[node name="Continue" type="Button" parent="Control/MarginContainer/Container/VBoxContainer/Control2"]
+[node name="Continue" type="Button" parent="Container"]
+custom_minimum_size = Vector2(196, 64)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 348.983
+offset_top = 180.775
+offset_right = -95.0173
+offset_bottom = -115.225
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.471239
+focus_neighbor_top = NodePath("../New game")
+focus_neighbor_bottom = NodePath("../Settings")
+focus_next = NodePath("../Settings")
+focus_previous = NodePath("../New game")
+theme = ExtResource("3_smrde")
 text = "Continue"
+script = ExtResource("5_vbyp8")
 
-[node name="Control3" type="Control" parent="Control/MarginContainer/Container/VBoxContainer"]
-layout_mode = 2
-
-[node name="Settings" type="Button" parent="Control/MarginContainer/Container/VBoxContainer/Control3"]
+[node name="Settings" type="Button" parent="Container"]
+custom_minimum_size = Vector2(196, 64)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 322.651
+offset_top = 232.453
+offset_right = -121.349
+offset_bottom = -63.5467
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.471239
+focus_neighbor_top = NodePath("../Continue")
+focus_neighbor_bottom = NodePath("../Exit")
+focus_next = NodePath("../Exit")
+focus_previous = NodePath("../Continue")
+theme = ExtResource("3_smrde")
 text = "Settings"
+script = ExtResource("5_vbyp8")
 
-[node name="Control4" type="Control" parent="Control/MarginContainer/Container/VBoxContainer"]
-layout_mode = 2
-
-[node name="Exit" type="Button" parent="Control/MarginContainer/Container/VBoxContainer/Control4"]
+[node name="Exit" type="Button" parent="Container"]
+custom_minimum_size = Vector2(196, 64)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.471239
+offset_left = 299.0
+offset_top = 282.0
+offset_right = 495.0
+offset_bottom = 346.0
+focus_neighbor_top = NodePath("../Settings")
+focus_neighbor_bottom = NodePath("../New game")
+focus_next = NodePath("../New game")
+focus_previous = NodePath("../Settings")
+theme = ExtResource("3_smrde")
 text = "Exit"
+script = ExtResource("5_vbyp8")
 
-[connection signal="pressed" from="Control/MarginContainer/Container/VBoxContainer/Control/New game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/Container/VBoxContainer/Control2/Continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/Container/VBoxContainer/Control3/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/Container/VBoxContainer/Control4/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Container/New game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Container/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Container/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Container/Exit" to="." method="_on_exit_pressed"]

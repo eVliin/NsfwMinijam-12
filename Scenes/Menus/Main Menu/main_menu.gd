@@ -3,8 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	$"Container/New game".grab_focus()
 
 func _on_new_game_pressed() -> void:
 	Global.game_controller.change_2d_scene(Global.TEST_ROOM)
@@ -21,4 +20,4 @@ func _on_settings_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()
