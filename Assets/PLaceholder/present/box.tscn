@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca0h1en8yxgif"]
+[gd_scene load_steps=3 format=3 uid="uid://ca0h1en8yxgif"]
 
 [ext_resource type="PackedScene" uid="uid://n152d1rdh0xc" path="res://Assets/PLaceholder/present/Box.glb" id="1_um8hc"]
+[ext_resource type="Material" uid="uid://5q6dqpjkhm6v" path="res://Assets/PLaceholder/present/Materials/Red.tres" id="2_wo8mg"]
 
 [node name="Box" instance=ExtResource("1_um8hc")]
 
 [node name="Caixa" parent="." index="0"]
+material_overlay = ExtResource("2_wo8mg")
 cast_shadow = 2

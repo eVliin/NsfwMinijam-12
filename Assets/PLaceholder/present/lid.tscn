@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bciqfvjrc5o57"]
+[gd_scene load_steps=3 format=3 uid="uid://bciqfvjrc5o57"]
 
 [ext_resource type="PackedScene" uid="uid://c1am8b25sagvc" path="res://Assets/PLaceholder/present/Lid.glb" id="1_llpls"]
+[ext_resource type="Material" uid="uid://5q6dqpjkhm6v" path="res://Assets/PLaceholder/present/Materials/Red.tres" id="2_55aoe"]
 
 [node name="Lid" instance=ExtResource("1_llpls")]
 
 [node name="Tampa" parent="." index="0"]
 cast_shadow = 2
+surface_material_override/0 = ExtResource("2_55aoe")

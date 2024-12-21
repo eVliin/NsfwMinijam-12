@@ -19,11 +19,14 @@ expand_mode = 3
 
 [node name="0" parent="Presents" instance=ExtResource("3_ppwu8")]
 position = Vector2(6, 69)
+color = "red"
 
 [node name="1" parent="Presents" instance=ExtResource("3_ppwu8")]
 position = Vector2(8, 190)
+color = "blue"
 
 [node name="2" parent="Presents" instance=ExtResource("3_ppwu8")]
 position = Vector2(8, 310)
+color = "white"
 
 [node name="MinigameLayer" type="Node" parent="."]
