@@ -1,3 +1,16 @@
-[gd_resource type="Theme" format=3 uid="uid://cqst728xxipcw"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cqst728xxipcw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yhyr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw8ub"]
+bg_color = Color(0.0923971, 0.0923971, 0.092397, 0.52549)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8js71"]
 
 [resource]
+Button/font_sizes/font_size = 30
+Button/styles/disabled = SubResource("StyleBoxEmpty_5yhyr")
+Button/styles/focus = SubResource("StyleBoxFlat_mw8ub")
+Button/styles/hover = SubResource("StyleBoxFlat_mw8ub")
+Button/styles/normal = SubResource("StyleBoxEmpty_8js71")
+Button/styles/pressed = SubResource("StyleBoxEmpty_8js71")

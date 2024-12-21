@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq15lwl1tqy2b"
-path="res://.godot/imported/selector.png-0dd0fc8888d6cf79f2708bc887f9e14d.ctex"
+uid="uid://b0jiu8603wrqv"
+path="res://.godot/imported/presentwhite.png-90897d407206c5aa0aa86d7e45fd32fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/selector.png"
-dest_files=["res://.godot/imported/selector.png-0dd0fc8888d6cf79f2708bc887f9e14d.ctex"]
+source_file="res://Assets/Sprites/Presents/presentwhite.png"
+dest_files=["res://.godot/imported/presentwhite.png-90897d407206c5aa0aa86d7e45fd32fb.ctex"]
 
 [params]
 

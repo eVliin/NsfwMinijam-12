@@ -28,9 +28,9 @@ SignalBus="*res://Autoload/SignalBus.gd"
 
 directories/dch_directory={
 "Chris": "res://Assets/Characters/Chris/Chris.dch",
-"Chris/Chris": "res://assets/Characters/Chris/Chris.dch",
+"Chris/Chris": "res://Assets/Characters/Chris/Chris.dch",
 "Mary": "res://Assets/Characters/Mary/Mary.dch",
-"Mary/Mary": "res://assets/Characters/Mary/Mary.dch"
+"Mary/Mary": "res://Assets/Characters/Mary/Mary.dch"
 }
 directories/dtl_directory={
 "TestDialogue": "res://Scenes/Rooms/TestRoom/TestDialogue.dtl",
@@ -71,6 +71,7 @@ choices/hotkey_behaviour=1
 text/autopauses={}
 layout/style_list=["res://Assets/UI/DialogStyle.tres"]
 layout/default_style="res://Assets/UI/DialogStyle.tres"
+layout/end_behaviour=1
 
 [display]
 
