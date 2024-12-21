@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bvgdaxk2tjswf"
-path="res://.godot/imported/Myuu-Angels-We-Have-Heard-On-High-Dark-Piano-Version.mp3-9e90fb180d76dcbd78db248b1d9682a3.mp3str"
+path="res://.godot/imported/Myuu-Angels-We-Have-Heard-On-High-Dark-Piano-Version.mp3-654b8d25c04b1ae4df268e630d1d4ff9.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Music/Myuu-Angels-We-Have-Heard-On-High-Dark-Piano-Version.mp3"
-dest_files=["res://.godot/imported/Myuu-Angels-We-Have-Heard-On-High-Dark-Piano-Version.mp3-9e90fb180d76dcbd78db248b1d9682a3.mp3str"]
+source_file="res://assets/Audio/Music/Myuu-Angels-We-Have-Heard-On-High-Dark-Piano-Version.mp3"
+dest_files=["res://.godot/imported/Myuu-Angels-We-Have-Heard-On-High-Dark-Piano-Version.mp3-654b8d25c04b1ae4df268e630d1d4ff9.mp3str"]
 
 [params]
 

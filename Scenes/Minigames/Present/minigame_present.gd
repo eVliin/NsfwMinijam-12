@@ -26,8 +26,8 @@ func _opened(ID):
 
 func _closed():
 	if _id == id:
+		_id = -1
 		visible = not visible
 		SignalBus.pop_close.emit()
-		_id = -1
 		set_process_input(false)
 		print(is_processing_input())

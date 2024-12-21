@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://8kku7pc54arn"
-path="res://.godot/imported/Myuu-Silent-Night-Dark-Piano-Version.mp3-fb8199183cd4ddb429d8b74d63794e43.mp3str"
+path="res://.godot/imported/Myuu-Silent-Night-Dark-Piano-Version.mp3-7630d0adbb3e70a636fba938fe32e792.mp3str"
 
 [deps]
 
-source_file="res://Assets/Audio/Music/Myuu-Silent-Night-Dark-Piano-Version.mp3"
-dest_files=["res://.godot/imported/Myuu-Silent-Night-Dark-Piano-Version.mp3-fb8199183cd4ddb429d8b74d63794e43.mp3str"]
+source_file="res://assets/Audio/Music/Myuu-Silent-Night-Dark-Piano-Version.mp3"
+dest_files=["res://.godot/imported/Myuu-Silent-Night-Dark-Piano-Version.mp3-7630d0adbb3e70a636fba938fe32e792.mp3str"]
 
 [params]
 
