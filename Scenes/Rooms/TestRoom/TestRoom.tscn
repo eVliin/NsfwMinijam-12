@@ -18,12 +18,12 @@ expand_mode = 3
 [node name="Presents" type="Node" parent="."]
 
 [node name="0" parent="Presents" instance=ExtResource("3_ppwu8")]
-position = Vector2(410, 327)
+position = Vector2(6, 69)
 
 [node name="1" parent="Presents" instance=ExtResource("3_ppwu8")]
-position = Vector2(273, 201)
+position = Vector2(8, 190)
 
 [node name="2" parent="Presents" instance=ExtResource("3_ppwu8")]
-position = Vector2(462, 183)
+position = Vector2(8, 310)
 
 [node name="MinigameLayer" type="Node" parent="."]

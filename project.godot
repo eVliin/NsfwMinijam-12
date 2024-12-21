@@ -23,7 +23,6 @@ boot_splash/use_filter=false
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://Autoload/Global.gd"
 SignalBus="*res://Autoload/SignalBus.gd"
-SceneManager="*res://Autoload/SceneManager/scene_manager.tscn"
 
 [dialogic]
 
@@ -80,6 +79,10 @@ window/stretch/scale_mode="integer"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[gui]
+
+theme/custom_font="res://Assets/UI/Fonts/InfoStory-PVVqP.otf"
 
 [importer_defaults]
 

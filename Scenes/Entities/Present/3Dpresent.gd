@@ -5,8 +5,11 @@ var rotating = false
 var prev_mouse_position
 var next_mouse_position
 
+func _ready() -> void:
+	connect("mouse_entered", _on_mouse_entered)
+	connect("mouse_exited", _on_mouse_exited)
+
 func _process(delta: float) -> void:
-	
 	if (Input.is_action_just_pressed("Zoom_in")) \
 	&& global_position.z <= 4:
 		global_position.z += 1
@@ -14,10 +17,10 @@ func _process(delta: float) -> void:
 	&& global_position.z >= -10.4:
 		global_position.z -= 1
 	if input:
-		if (Input.is_action_just_pressed("Rotate")):
+		if (Input.is_action_just_pressed("Select")):
 			rotating = true
 			prev_mouse_position = get_viewport().get_mouse_position()
-	if (Input.is_action_just_released("Rotate")):
+	if (Input.is_action_just_released("Select")):
 		rotating = false
 	
 	if (rotating):

@@ -12,7 +12,6 @@ func transition_in() -> void:
 
 
 func transition_out() -> void:
-	await transitioned_in
 	create_tween().tween_property(margin_container, "scale", Vector2.ZERO, 0.3)
 	animation_player.play("out")
 

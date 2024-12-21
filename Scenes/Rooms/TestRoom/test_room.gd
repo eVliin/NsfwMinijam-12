@@ -14,7 +14,6 @@ func _ready() -> void:
 		instance.id = i
 		$MinigameLayer.add_child(instance)
 
-
 func _pop_up():
 	popUpTrack += 1
 	set_process_input(false)
@@ -23,3 +22,7 @@ func _pop_close():
 	popUpTrack -= 1
 	if popUpTrack <= 0:
 		set_process_input(true)
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_up"):
+		print("buceta")

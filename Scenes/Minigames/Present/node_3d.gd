@@ -7,7 +7,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mouse = event.position
 	if event is InputEventMouseButton:
-		if Input.is_action_just_pressed("dialogic_default_action"):
+		if Input.is_action_just_pressed("Select"):
 			get_mouse_world_pos(mouse)
 
 func get_mouse_world_pos(mouse:Vector2):
@@ -23,6 +23,6 @@ func get_mouse_world_pos(mouse:Vector2):
 	params.to = end
 	#cast the ray using the space and return the results as a Dictionary
 	var result = space.intersect_ray(params)
+	print(result)
 	if result.is_empty():
-		print(result)
 		SignalBus.present_close.emit()
