@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ggow5ddllgga"]
+[gd_scene load_steps=7 format=3 uid="uid://ggow5ddllgga"]
 
 [ext_resource type="Texture2D" uid="uid://8u5vthp8lu5e" path="res://Assets/PLaceholder/titlemockup.png" id="1_gl3g7"]
 [ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_hgnt5"]
 [ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="3_smrde"]
 [ext_resource type="Script" path="res://Scenes/Menus/Main Menu/button.gd" id="4_4g04n"]
 [ext_resource type="Script" path="res://scenes/Menus/Main Menu/button.gd" id="5_vbyp8"]
+[ext_resource type="AudioStream" uid="uid://deuwe5igu306i" path="res://Assets/Audio/Music/Myuu-Last-Christmas-Sad-Piano-Version.mp3" id="6_35s0o"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -38,6 +39,7 @@ focus_neighbor_top = NodePath("../Exit")
 focus_neighbor_bottom = NodePath("../Continue")
 focus_next = NodePath("../Continue")
 focus_previous = NodePath("../Exit")
+mouse_default_cursor_shape = 2
 theme = ExtResource("3_smrde")
 text = "New game"
 script = ExtResource("4_4g04n")
@@ -58,6 +60,7 @@ focus_neighbor_top = NodePath("../New game")
 focus_neighbor_bottom = NodePath("../Settings")
 focus_next = NodePath("../Settings")
 focus_previous = NodePath("../New game")
+mouse_default_cursor_shape = 2
 theme = ExtResource("3_smrde")
 text = "Continue"
 script = ExtResource("5_vbyp8")
@@ -78,6 +81,7 @@ focus_neighbor_top = NodePath("../Continue")
 focus_neighbor_bottom = NodePath("../Exit")
 focus_next = NodePath("../Exit")
 focus_previous = NodePath("../Continue")
+mouse_default_cursor_shape = 2
 theme = ExtResource("3_smrde")
 text = "Settings"
 script = ExtResource("5_vbyp8")
@@ -93,9 +97,15 @@ focus_neighbor_top = NodePath("../Settings")
 focus_neighbor_bottom = NodePath("../New game")
 focus_next = NodePath("../New game")
 focus_previous = NodePath("../Settings")
+mouse_default_cursor_shape = 2
 theme = ExtResource("3_smrde")
 text = "Exit"
 script = ExtResource("5_vbyp8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_35s0o")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Container/New game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Container/Continue" to="." method="_on_continue_pressed"]
