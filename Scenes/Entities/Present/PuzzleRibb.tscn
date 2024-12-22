@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://c46rsgv258oad"]
+
+[ext_resource type="Script" path="res://Scenes/Entities/Present/puzzle_ribb.gd" id="1_1sqhq"]
+[ext_resource type="PackedScene" uid="uid://yvsg8inicp6" path="res://Assets/PLaceholder/present/knot.tscn" id="2_kuloq"]
+[ext_resource type="PackedScene" uid="uid://byynyra6i8w1e" path="res://Assets/PLaceholder/present/pull.tscn" id="3_jawny"]
+[ext_resource type="PackedScene" uid="uid://cxpesy6bfx0bi" path="res://Assets/PLaceholder/present/pull_l.tscn" id="4_hqwvj"]
+[ext_resource type="PackedScene" uid="uid://ddxi1mjqnilv7" path="res://Assets/PLaceholder/present/ribbon.tscn" id="5_2hujo"]
+[ext_resource type="PackedScene" uid="uid://bi6apvs1q888d" path="res://Assets/PLaceholder/present/ribbon_l.tscn" id="6_y56mu"]
+[ext_resource type="PackedScene" uid="uid://bu71mxbqkurtb" path="res://Assets/PLaceholder/present/Lock_.glb" id="7_apnm4"]
+[ext_resource type="PackedScene" uid="uid://b52nhp1gjavcf" path="res://Assets/PLaceholder/present/Lock.glb" id="8_br7bv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u7o3g"]
+size = Vector3(0.0317383, 0.115753, 0.00683594)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_miebq"]
+size = Vector3(0.0317383, 0.115753, 0.00683594)
+
+[node name="PuzzleRibb" type="Node3D"]
+script = ExtResource("1_1sqhq")
+
+[node name="Knot" parent="." instance=ExtResource("2_kuloq")]
+
+[node name="Pull" parent="." instance=ExtResource("3_jawny")]
+transform = Transform3D(0.913126, 0.407677, 0, -0.407677, 0.913126, 0, 0, 0, 1, -0.01, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Pull"]
+transform = Transform3D(0.913126, -0.407677, 0, 0.407677, 0.913126, 0, 0, 0, 1, 0.00913126, 0.00407677, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pull/Area3D"]
+transform = Transform3D(0.924533, 0.381103, 0, -0.379472, 0.920577, 0.0924054, 0.0352159, -0.0854318, 0.995721, -0.0386832, -0.0601606, 0.00127956)
+shape = SubResource("BoxShape3D_u7o3g")
+
+[node name="Pull_L" parent="." instance=ExtResource("4_hqwvj")]
+transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 0.01, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Pull_L"]
+transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, -0.00939693, 0.0034202, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pull_L/Area3D"]
+transform = Transform3D(0.95444, -0.29829, 0.00815662, 0.296319, 0.950647, 0.0920098, -0.0351997, -0.0854009, 0.995725, 0.0328409, -0.06, 0.001)
+shape = SubResource("BoxShape3D_miebq")
+
+[node name="Ribbon" parent="." instance=ExtResource("5_2hujo")]
+transform = Transform3D(1.00569, 0.00334424, 0.0356151, -0.00351206, 0.987782, 0.00419064, -0.0298359, -0.0035488, 1.2, 0.001, 0, 0)
+
+[node name="Ribbon_L" parent="." instance=ExtResource("6_y56mu")]
+transform = Transform3D(1.00567, 0.00284362, -0.0365203, -0.00277835, 0.987783, 0.00468107, 0.0306177, -0.00376682, 1.19997, -0.00103508, 0, 0.000484198)
+
+[node name="Lock" parent="." instance=ExtResource("8_br7bv")]
+transform = Transform3D(1, 0, 0, 0, 0.964072, 0.26564, 0, -0.26564, 0.964072, 0, -0.0310234, 0.00725875)
+
+[node name="Sprite3D" type="Sprite3D" parent="Lock"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, -0.0320875, 0.116453)
+
+[node name="Lock_" parent="." instance=ExtResource("7_apnm4")]
+transform = Transform3D(1, 0, 0, 0, 0.964072, 0.26564, 0, -0.26564, 0.964072, 0, -0.0310234, 0.00725875)

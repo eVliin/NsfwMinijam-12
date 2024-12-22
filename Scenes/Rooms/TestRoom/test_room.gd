@@ -12,7 +12,7 @@ func _ready() -> void:
 		
 		var instance = MINIGAME_PRESENT.instantiate()
 		instance.id = i
-		$MinigameLayer.add_child(instance)
+		$Camera2D/MinigameLayer.add_child(instance)
 
 func _pop_up():
 	popUpTrack += 1

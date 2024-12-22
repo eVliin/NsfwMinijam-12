@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var presents: Node = get_parent().get_parent().get_node('Presents')
+@onready var presents: Node = get_parent().get_parent().get_parent().get_node('Presents')
 @onready var present: StaticBody3D = $SubViewportContainer/SubViewport/Node3D/Present
 
 signal color_set
