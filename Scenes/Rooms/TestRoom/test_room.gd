@@ -6,12 +6,12 @@ var popUpTrack :int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	Dialogic.start('TestDialogue')
 	popUpTrack = 0
 	for i in $Presents.get_child_count():
 		
 		var instance = MINIGAME_PRESENT.instantiate()
-		instance.id = i
+		instance.name = str(i)
 		$Camera2D/MinigameLayer.add_child(instance)
 
 func _pop_up():

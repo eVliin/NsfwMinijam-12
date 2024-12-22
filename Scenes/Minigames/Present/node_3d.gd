@@ -7,7 +7,7 @@ func _ready() -> void:
 	SignalBus.get_mouse_world_pos.connect(get_mouse_world_pos)
 
 func get_mouse_world_pos(mouse:Vector2):
-	if minigame_present.id == minigame_present._id:
+	if minigame_present.name.to_int() == minigame_present._id:
 		#The physics state of the world
 		var space = get_world_3d().direct_space_state
 		#start and end world positions for the ray

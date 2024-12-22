@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://yyuns6yar821"]
+[gd_scene load_steps=7 format=3 uid="uid://yyuns6yar821"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Present/node_3d.gd" id="1_tgx4l"]
 [ext_resource type="PackedScene" uid="uid://b0rpug8oir2ks" path="res://Scenes/Entities/Present/3Dpresent.tscn" id="2_242nx"]
 [ext_resource type="Script" path="res://Scenes/Entities/Present/3Dpresent.gd" id="3_j14yw"]
+[ext_resource type="Material" uid="uid://5q6dqpjkhm6v" path="res://Assets/PLaceholder/present/Materials/Red.tres" id="4_nq5dq"]
+[ext_resource type="Material" uid="uid://sysk0xcl723a" path="res://Assets/PLaceholder/present/Materials/Blue.tres" id="5_r6mpq"]
+[ext_resource type="Material" uid="uid://b5fdh5bjcgslc" path="res://Assets/PLaceholder/present/Materials/White.tres" id="6_08543"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Minigame" type="Node3D"]
 script = ExtResource("1_tgx4l")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -25,6 +28,9 @@ directional_shadow_pancake_size = 0.1
 [node name="Present" parent="." instance=ExtResource("2_242nx")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("3_j14yw")
+red = ExtResource("4_nq5dq")
+blue = ExtResource("5_r6mpq")
+white = ExtResource("6_08543")
 
 [connection signal="mouse_entered" from="Present" to="Present" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Present" to="Present" method="_on_mouse_exited"]

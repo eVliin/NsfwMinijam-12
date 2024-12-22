@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d38dig07xuw0l"]
+
+[ext_resource type="Texture2D" uid="uid://ccud813k01rli" path="res://Assets/PLaceholder/present/Materials/lock_albedo.png" id="1_yq1ax"]
+
+[resource]
+albedo_color = Color(0.69, 0.45724, 0.0552, 1)
+albedo_texture = ExtResource("1_yq1ax")
+metallic = 1.0
+roughness = 0.5

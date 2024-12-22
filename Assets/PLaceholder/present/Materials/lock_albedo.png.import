@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm51ayir7gox2"
-path.s3tc="res://.godot/imported/lock.png-fb159ae30e4085419d51dd6b54a676d9.s3tc.ctex"
+uid="uid://ccud813k01rli"
+path.s3tc="res://.godot/imported/lock_albedo.png-6cb3402e312afcadb9329688a15c4218.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Sprites/Minigames/lock.png"
-dest_files=["res://.godot/imported/lock.png-fb159ae30e4085419d51dd6b54a676d9.s3tc.ctex"]
+source_file="res://Assets/PLaceholder/present/Materials/lock_albedo.png"
+dest_files=["res://.godot/imported/lock_albedo.png-6cb3402e312afcadb9329688a15c4218.s3tc.ctex"]
 
 [params]
 
