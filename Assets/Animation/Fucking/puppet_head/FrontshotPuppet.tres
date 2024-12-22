@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://hucdcbsvnwna"]
+
+[ext_resource type="Texture2D" uid="uid://cgn6mmed1ijbh" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0001.png" id="1_j2jd7"]
+[ext_resource type="Texture2D" uid="uid://cjalhgmxn8glx" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0002.png" id="2_vn0i1"]
+[ext_resource type="Texture2D" uid="uid://ccrc2hs0vdqou" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0003.png" id="3_rbsth"]
+[ext_resource type="Texture2D" uid="uid://ctktb23x1i8cy" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0004.png" id="4_kfs5u"]
+[ext_resource type="Texture2D" uid="uid://dfqseyf5xc35n" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0005.png" id="5_oktkw"]
+[ext_resource type="Texture2D" uid="uid://dd7y2l361exgk" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0006.png" id="6_1f7ke"]
+[ext_resource type="Texture2D" uid="uid://c0rkp10i7mobw" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0007.png" id="7_2xxlh"]
+[ext_resource type="Texture2D" uid="uid://qrqyg63m3mr6" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0008.png" id="8_nd7pw"]
+[ext_resource type="Texture2D" uid="uid://bca6oddlv08ri" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0009.png" id="9_q5bat"]
+[ext_resource type="Texture2D" uid="uid://cwdkyq5bb2x83" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0010.png" id="10_8qqoq"]
+[ext_resource type="Texture2D" uid="uid://utrfien2xmay" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0011.png" id="11_ycnpl"]
+[ext_resource type="Texture2D" uid="uid://o434dn3cckg" path="res://Assets/Animation/Fucking/puppet_head/pupped_head_hand/puppet_head_hand_0012.png" id="12_1fkd5"]
+[ext_resource type="Texture2D" uid="uid://byuicrrhqt8ab" path="res://Assets/Animation/Fucking/puppet_head/puppet_head_body/puppet_head_body_0001.png" id="13_uilgm"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j2jd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vn0i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rbsth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kfs5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oktkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1f7ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2xxlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nd7pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q5bat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8qqoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ycnpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1fkd5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_uilgm")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]

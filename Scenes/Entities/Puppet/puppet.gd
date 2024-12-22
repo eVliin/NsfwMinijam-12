@@ -7,6 +7,17 @@ const PRESENTWHITE = preload("res://Assets/Sprites/Presents/presentwhite.png")
 @export_enum("left", "ground", "right") var pose: String
 @export_range(1, 5) var aggro: int = 1
 
+
+var Stage : int = 0:
+	get:
+		return Stage
+	set(value):
+		if Stage >= 2:
+			Stage = 0
+		else:
+			Stage += value
+		random()
+
 var aggro_lvls: Dictionary = {
 	1: Vector2(20, 30),
 	2: Vector2(15, 25),
@@ -26,7 +37,8 @@ func random():
 		rng.randomize()  # Randomize to ensure different sequences each run
 		var random_delay: float = rng.randf_range(range.x, range.y)
 		await get_tree().create_timer(random_delay).timeout
-		print("boo")
+		Stage = 1
+		print(Stage)
 	else:
 		print("Invalid aggro level: ", aggro)
 

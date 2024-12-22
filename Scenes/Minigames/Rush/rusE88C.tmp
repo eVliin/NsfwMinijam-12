@@ -20,7 +20,6 @@ script = ExtResource("2_n4pfe")
 shape = SubResource("RectangleShape2D_2q7a1")
 
 [node name="Piece 1x3" type="RigidBody2D" parent="Pieces"]
-position = Vector2(27, 1)
 gravity_scale = 0.0
 script = ExtResource("2_n4pfe")
 
@@ -28,7 +27,6 @@ script = ExtResource("2_n4pfe")
 shape = SubResource("RectangleShape2D_2q7a1")
 
 [node name="Piece 1x4" type="RigidBody2D" parent="Pieces"]
-position = Vector2(15, -25)
 gravity_scale = 0.0
 script = ExtResource("2_n4pfe")
 
