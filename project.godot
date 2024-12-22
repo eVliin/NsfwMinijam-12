@@ -21,8 +21,8 @@ boot_splash/use_filter=false
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Global="*res://Autoload/Global.gd"
 SignalBus="*res://Autoload/SignalBus.gd"
+Global="*res://Autoload/Global.gd"
 
 [dialogic]
 
@@ -40,7 +40,7 @@ variables={
 "Global.player_has_control": false
 }
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
+text/letter_speed=0.02
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
@@ -72,6 +72,7 @@ text/autopauses={}
 layout/style_list=["res://Assets/UI/DialogStyle.tres"]
 layout/default_style="res://Assets/UI/DialogStyle.tres"
 layout/end_behaviour=1
+text/autocolor_names=true
 
 [display]
 

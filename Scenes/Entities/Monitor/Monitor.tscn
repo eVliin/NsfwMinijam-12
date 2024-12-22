@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dms0yb8uplpdw"]
+
+[ext_resource type="Texture2D" uid="uid://dvn4mabrwopbh" path="res://Assets/UI/tv.png" id="1_4dsbv"]
+
+[node name="Monitor" type="Node2D"]
+
+[node name="Screen" type="Sprite2D" parent="."]
+
+[node name="Frame" type="Sprite2D" parent="."]
+texture = ExtResource("1_4dsbv")
