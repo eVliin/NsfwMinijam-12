@@ -4,9 +4,20 @@
 "_translation_id": "",
 "color": Color(0.328125, 1, 0.527588, 1),
 "custom_info": {
-"sound_mood_default": "",
-"sound_moods": {},
-"style": ""
+"sound_mood_default": "Mood 1",
+"sound_moods": {
+"Mood 1": {
+"mode": 0,
+"name": "Mood 1",
+"pitch_base": 1.1,
+"pitch_variance": -0.1,
+"skip_characters": 1.0,
+"sound_path": "res://Assets/Characters/Chris/blipSelect.wav",
+"volume_base": 0.2,
+"volume_variance": -0.2
+}
+},
+"style": "DialogStyle"
 },
 "default_portrait": "",
 "description": "",

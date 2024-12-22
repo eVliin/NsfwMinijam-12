@@ -4,10 +4,21 @@ signal transitioned_in()
 signal transitioned_out()
 
 @export var world_2d : Node2D
-@export var gui : Control
+@export var gui : CanvasLayer
 
 var current_2d_scene
 var current_gui_scene
+var game_paused : bool = false:
+	get:
+		return game_paused
+	set(value):
+		game_paused = value
+		if game_paused:
+			$Node2D.process_mode = 4
+		else:
+			$Node2D.process_mode = 0
+		SignalBus.pause.emit(game_paused)
+
 
 const MOUSESELECT = preload("res://Assets/UI/mouseselect.png")
 
@@ -15,6 +26,10 @@ func _ready() -> void:
 	Global.game_controller = self
 	current_gui_scene = $GUI/SplashScreenManager
 	Input.set_custom_mouse_cursor(MOUSESELECT, Input.CURSOR_POINTING_HAND)
+
+func _input(event: InputEvent) -> void:
+	if(event.is_action_pressed("ui_cancel")) && Global.player_has_control:
+		game_paused = !game_paused
 
 func change_gui_scene(new_scene: String, transition: bool = false, delete:bool = true, keep_running: bool = false) -> void:
 	if transition:

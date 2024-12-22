@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://4nqj6x1h17s2"]
+[gd_scene load_steps=13 format=3 uid="uid://4nqj6x1h17s2"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l3pd1"]
 [ext_resource type="PackedScene" uid="uid://f114i1ajry73" path="res://Scenes/Menus/SplashScreen/SplashScreenManager.tscn" id="2_bhs38"]
 [ext_resource type="Script" path="res://Autoload/SceneManager/scene_manager.gd" id="3_4ejcn"]
+[ext_resource type="PackedScene" uid="uid://cxo4pgexqxm3l" path="res://Scenes/Menus/Pause/Pause_menu.tscn" id="3_d2kxq"]
 [ext_resource type="Shader" path="res://Assets/Shaders/horizontal_split.gdshader" id="4_gccw1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ugclb"]
@@ -181,25 +182,26 @@ _data = {
 }
 
 [node name="Main" type="Node" node_paths=PackedStringArray("world_2d", "gui")]
+process_mode = 3
+process_priority = -1
 script = ExtResource("1_l3pd1")
 world_2d = NodePath("Node2D")
 gui = NodePath("GUI")
 
 [node name="Node2D" type="Node2D" parent="."]
+process_mode = 1
 
-[node name="GUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
+[node name="GUI" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="SplashScreenManager" parent="GUI" instance=ExtResource("2_bhs38")]
-layout_mode = 1
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource("3_d2kxq")]
+process_mode = 3
+z_index = 5
 
 [node name="LoadManager" type="CanvasLayer" parent="."]
+process_mode = 3
 script = ExtResource("3_4ejcn")
 
 [node name="Overlay" type="ColorRect" parent="LoadManager"]

@@ -1,5 +1,5 @@
-[music path="res://Assets/Audio/Music/Myuu-Jingle-Bells-Dark-Piano-Version.mp3" fade="1.0" volume="0.0"]
+[music fade="1.0" volume="0.0"]
 [background fade="0.0"]
-join Mary center
-Mary: My Galls Itch...
+join Chris center
+Chris: My Galls Itch...
 set {Global.player_has_control} = true

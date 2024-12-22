@@ -1,0 +1,146 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxo4pgexqxm3l"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/button.gd" id="1_1k5bc"]
+[ext_resource type="Script" path="res://Scenes/Menus/Pause/pause_menu.gd" id="1_smv0r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st30p"]
+bg_color = Color(0.158472, 0.158472, 0.158472, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y8op"]
+bg_color = Color(0.1668, 0.0156894, 0.0149351, 0.866667)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_smv0r")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_st30p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+process_mode = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "=Game paused="
+uppercase = true
+
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(108, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Options")
+focus_next = NodePath("../Options")
+focus_previous = NodePath("../Quit")
+mouse_default_cursor_shape = 2
+text = "Resume"
+script = ExtResource("1_1k5bc")
+
+[node name="Options" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(108, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Resume")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Resume")
+mouse_default_cursor_shape = 2
+text = "Options"
+script = ExtResource("1_1k5bc")
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(108, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Resume")
+focus_next = NodePath("../Resume")
+focus_previous = NodePath("../Options")
+mouse_default_cursor_shape = 2
+text = "Main Menu"
+script = ExtResource("1_1k5bc")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_6y8op")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Arusur" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Are You Sure?"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Your progress in THIS ROOM will be lost."
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Main")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../Main")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../Main")
+focus_previous = NodePath("../Main")
+mouse_default_cursor_shape = 2
+text = "Back"
+script = ExtResource("1_1k5bc")
+
+[node name="Main" type="Button" parent="PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Back")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../Back")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../Back")
+focus_previous = NodePath("../Back")
+mouse_default_cursor_shape = 2
+text = "Get me to the
+fucking menu!"
+script = ExtResource("1_1k5bc")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Main" to="." method="_on_main_pressed"]

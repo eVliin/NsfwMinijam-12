@@ -9,7 +9,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if has_focus() or is_hovered():
+	if is_hovered():
+		grab_focus()
+	if has_focus():
 		icon = SELECTOR
 	else:
 		icon = null
