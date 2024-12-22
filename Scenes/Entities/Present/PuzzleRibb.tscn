@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c46rsgv258oad"]
+[gd_scene load_steps=12 format=3 uid="uid://c46rsgv258oad"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Present/puzzle_ribb.gd" id="1_1sqhq"]
 [ext_resource type="PackedScene" uid="uid://yvsg8inicp6" path="res://Assets/PLaceholder/present/knot.tscn" id="2_kuloq"]
@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cxpesy6bfx0bi" path="res://Assets/PLaceholder/present/pull_l.tscn" id="4_hqwvj"]
 [ext_resource type="PackedScene" uid="uid://ddxi1mjqnilv7" path="res://Assets/PLaceholder/present/ribbon.tscn" id="5_2hujo"]
 [ext_resource type="PackedScene" uid="uid://bi6apvs1q888d" path="res://Assets/PLaceholder/present/ribbon_l.tscn" id="6_y56mu"]
-[ext_resource type="PackedScene" uid="uid://bu71mxbqkurtb" path="res://Assets/PLaceholder/present/Lock_.glb" id="7_apnm4"]
-[ext_resource type="PackedScene" uid="uid://b52nhp1gjavcf" path="res://Assets/PLaceholder/present/Lock.glb" id="8_br7bv"]
+[ext_resource type="PackedScene" uid="uid://bmtq7ulrcy2hk" path="res://Assets/Models/lock.tscn" id="7_bdqdv"]
+[ext_resource type="PackedScene" uid="uid://dblo0twk321hc" path="res://Assets/Models/lock_.tscn" id="8_coo0y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u7o3g"]
 size = Vector3(0.0317383, 0.115753, 0.00683594)
@@ -15,7 +15,10 @@ size = Vector3(0.0317383, 0.115753, 0.00683594)
 [sub_resource type="BoxShape3D" id="BoxShape3D_miebq"]
 size = Vector3(0.0317383, 0.115753, 0.00683594)
 
-[node name="PuzzleRibb" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_v13eb"]
+size = Vector3(1.22852, 1.14453, 0.359497)
+
+[node name="PuzzleRibb" type="Node3D" groups=["Targets"]]
 script = ExtResource("1_1sqhq")
 
 [node name="Knot" parent="." instance=ExtResource("2_kuloq")]
@@ -46,11 +49,15 @@ transform = Transform3D(1.00569, 0.00334424, 0.0356151, -0.00351206, 0.987782, 0
 [node name="Ribbon_L" parent="." instance=ExtResource("6_y56mu")]
 transform = Transform3D(1.00567, 0.00284362, -0.0365203, -0.00277835, 0.987783, 0.00468107, 0.0306177, -0.00376682, 1.19997, -0.00103508, 0, 0.000484198)
 
-[node name="Lock" parent="." instance=ExtResource("8_br7bv")]
+[node name="Lock" parent="." instance=ExtResource("7_bdqdv")]
 transform = Transform3D(1, 0, 0, 0, 0.964072, 0.26564, 0, -0.26564, 0.964072, 0, -0.0310234, 0.00725875)
 
-[node name="Sprite3D" type="Sprite3D" parent="Lock"]
-transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, -0.0320875, 0.116453)
+[node name="Area3D" type="Area3D" parent="Lock"]
+transform = Transform3D(1, 0, 0, 0, 0.964073, -0.26564, 0, 0.26564, 0.964072, -6.51926e-09, 0.031837, 0.0012431)
 
-[node name="Lock_" parent="." instance=ExtResource("7_apnm4")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lock/Area3D"]
+transform = Transform3D(0.108924, 0, 0, 0, 0.105213, 0.0281917, 0, -0.0281917, 0.105213, 0, -0.118252, 0.0398088)
+shape = SubResource("BoxShape3D_v13eb")
+
+[node name="Lock_" parent="." instance=ExtResource("8_coo0y")]
 transform = Transform3D(1, 0, 0, 0, 0.964072, 0.26564, 0, -0.26564, 0.964072, 0, -0.0310234, 0.00725875)
