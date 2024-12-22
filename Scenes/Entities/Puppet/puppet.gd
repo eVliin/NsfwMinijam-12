@@ -1,17 +1,34 @@
 extends Node2D
 
-@export_enum("left", "ground", "right") var color: String
-@export_range(1,5) var aggro : int
+const PRESENTBLUE = preload("res://Assets/Sprites/Presents/presentblue.png")
+const PRESENTRED = preload("res://Assets/Sprites/Presents/presentred.png")
+const PRESENTWHITE = preload("res://Assets/Sprites/Presents/presentwhite.png")
 
+@export_enum("left", "ground", "right") var pose: String
+@export_range(1, 5) var aggro: int = 1
 
+var aggro_lvls: Dictionary = {
+	1: Vector2(20, 30),
+	2: Vector2(15, 25),
+	3: Vector2(10, 25),
+	4: Vector2(5, 20),
+	5: Vector2(5, 15)
+}
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	random()
 
 func random():
-	var random_delay : float = RandomNumberGenerator.new().randf_range(0.1, 2.0)
-	await get_tree().create_timer(random_delay).timeout
+	# Ensure the aggro level exists in the dictionary
+	if aggro_lvls.has(aggro):
+		var range: Vector2 = aggro_lvls[aggro]
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()  # Randomize to ensure different sequences each run
+		var random_delay: float = rng.randf_range(range.x, range.y)
+		await get_tree().create_timer(random_delay).timeout
+		print("boo")
+	else:
+		print("Invalid aggro level: ", aggro)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
