@@ -1,12 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://crwt5jo6i37u8"]
+[gd_scene load_steps=3 format=3 uid="uid://crwt5jo6i37u8"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Present/minigame_present.gd" id="1_dc6tb"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Present/node_3d.gd" id="2_64heb"]
-[ext_resource type="PackedScene" uid="uid://b0rpug8oir2ks" path="res://Scenes/Entities/Present/3Dpresent.tscn" id="3_ahvk5"]
-[ext_resource type="Script" path="res://Scenes/Entities/Present/3Dpresent.gd" id="4_ns0x0"]
-[ext_resource type="Material" uid="uid://5q6dqpjkhm6v" path="res://Assets/PLaceholder/present/Materials/Red.tres" id="5_sa4ah"]
-[ext_resource type="Material" uid="uid://sysk0xcl723a" path="res://Assets/PLaceholder/present/Materials/Blue.tres" id="6_uu5j8"]
-[ext_resource type="Material" uid="uid://b5fdh5bjcgslc" path="res://Assets/PLaceholder/present/Materials/White.tres" id="7_s3glw"]
+[ext_resource type="PackedScene" uid="uid://yyuns6yar821" path="res://Scenes/Minigames/Present/3dMinigamePresent.tscn" id="2_2kj1k"]
 
 [node name="MinigamePresent" type="Node2D" groups=["Minigames"]]
 visible = false
@@ -27,31 +22,4 @@ size = Vector2i(640, 360)
 size_2d_override = Vector2i(640, 360)
 render_target_update_mode = 0
 
-[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
-script = ExtResource("2_64heb")
-
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.44717)
-current = true
-fov = 38.1731
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -5.74039, 5.54499, 5.74328)
-light_volumetric_fog_energy = 0.0
-shadow_enabled = true
-directional_shadow_mode = 1
-directional_shadow_split_1 = 0.394
-directional_shadow_blend_splits = true
-directional_shadow_max_distance = 19.0
-directional_shadow_pancake_size = 0.1
-
-[node name="Present" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_ahvk5")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-script = ExtResource("4_ns0x0")
-red = ExtResource("5_sa4ah")
-blue = ExtResource("6_uu5j8")
-white = ExtResource("7_s3glw")
-
-[connection signal="color_set" from="." to="SubViewportContainer/SubViewport/Node3D/Present" method="_on_color_set"]
-[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Node3D/Present" to="SubViewportContainer/SubViewport/Node3D/Present" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="SubViewportContainer/SubViewport/Node3D/Present" to="SubViewportContainer/SubViewport/Node3D/Present" method="_on_mouse_exited"]
+[node name="Node3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_2kj1k")]

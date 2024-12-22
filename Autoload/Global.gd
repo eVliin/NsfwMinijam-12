@@ -4,6 +4,7 @@ const MAIN_MENU = "res://Scenes/Menus/Main Menu/MainMenu.tscn"
 const TEST_ROOM = "res://Scenes/Rooms/TestRoom/TestRoom.tscn"
 const HUD = "res://Scenes/HUD/Hud.tscn"
 
+var cameraPan = 0
 var game_controller : GameController
 var player_has_control : bool
 var mouse = Vector2()
