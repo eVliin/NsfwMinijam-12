@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7prpwqs8046"
-path="res://.godot/imported/room1.png-ab535983b913f8264b2f2171bb130433.ctex"
+uid="uid://v0ul8feh5st8"
+path="res://.godot/imported/portraitbase.png-a36fe5ad8f042326d904946c267aaf69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BG/room1.png"
-dest_files=["res://.godot/imported/room1.png-ab535983b913f8264b2f2171bb130433.ctex"]
+source_file="res://Assets/Characters/Chris/portraitbase.png"
+dest_files=["res://.godot/imported/portraitbase.png-a36fe5ad8f042326d904946c267aaf69.ctex"]
 
 [params]
 

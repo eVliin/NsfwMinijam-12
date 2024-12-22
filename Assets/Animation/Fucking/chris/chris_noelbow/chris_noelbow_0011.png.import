@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7prpwqs8046"
-path="res://.godot/imported/room1.png-ab535983b913f8264b2f2171bb130433.ctex"
+uid="uid://b4s1fvq8bpb14"
+path="res://.godot/imported/chris_noelbow_0011.png-1865b0b6a00fddf7aac94cbfbe56360c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BG/room1.png"
-dest_files=["res://.godot/imported/room1.png-ab535983b913f8264b2f2171bb130433.ctex"]
+source_file="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0011.png"
+dest_files=["res://.godot/imported/chris_noelbow_0011.png-1865b0b6a00fddf7aac94cbfbe56360c.ctex"]
 
 [params]
 

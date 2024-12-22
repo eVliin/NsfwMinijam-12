@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7prpwqs8046"
-path="res://.godot/imported/room1.png-ab535983b913f8264b2f2171bb130433.ctex"
+uid="uid://c3f7ii1r8e2ax"
+path="res://.godot/imported/chris_elbow_0007.png-ccdcaee61f0109d2fda77eafac730b9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BG/room1.png"
-dest_files=["res://.godot/imported/room1.png-ab535983b913f8264b2f2171bb130433.ctex"]
+source_file="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0007.png"
+dest_files=["res://.godot/imported/chris_elbow_0007.png-ccdcaee61f0109d2fda77eafac730b9d.ctex"]
 
 [params]
 
