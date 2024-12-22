@@ -1,5 +1,7 @@
 extends Node
 
+signal pause(is_paused : bool)
+
 signal pop_open
 signal pop_close
 signal present_open
