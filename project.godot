@@ -10,13 +10,15 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Stockings Naughtymare"
+config/description="Wake up in a mysterious, strange room, your head spinning and memories foggy. As you navigate the eerie mansion, you quickly discover that you’ve made a dangerous deal with Mary, a seductive yet terrifying entity who claims to be a Christmas spirit. She offers you the chance to escape her haunted mansion with a life of luxury—if you can survive the challenges and puzzles laid out before you."
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.0509804, 0.0509804, 0.0509804, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+config/icon="res://Assets/UI/Splashscreen/Illustration17clip.png"
 
 [autoload]
 
@@ -70,6 +72,7 @@ layout/style_list=["res://Assets/UI/DialogStyle.tres"]
 layout/default_style="res://Assets/UI/DialogStyle.tres"
 layout/end_behaviour=1
 text/autocolor_names=true
+glossary/default_case_sensitive=true
 
 [display]
 
@@ -119,7 +122,14 @@ Zoom_out={
 ]
 }
 
+[physics]
+
+2d/default_gravity_vector=Vector2(0, 0)
+2d/default_linear_damp=30.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 2d/snap/snap_2d_transforms_to_pixel=true
