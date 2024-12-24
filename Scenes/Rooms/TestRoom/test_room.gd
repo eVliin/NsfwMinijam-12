@@ -6,6 +6,10 @@ var popUpTrack :int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SignalBus.pop_open.connect(_pop_up)
+	SignalBus.pop_close.connect(_pop_close)
+	SignalBus.attacking.connect(_pop_up)
+	Global.AttackTrack = 0
 	Dialogic.start('TestDialogue')
 	popUpTrack = 0
 	for i in $Presents.get_child_count():

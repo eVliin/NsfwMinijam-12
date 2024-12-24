@@ -1,40 +1,40 @@
 [gd_resource type="SpriteFrames" load_steps=36 format=3 uid="uid://bdpwnj8hvoh8i"]
 
-[ext_resource type="Texture2D" uid="uid://d070hxro54n01" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0002.png" id="2_hkehv"]
-[ext_resource type="Texture2D" uid="uid://1jnw8bfyhn2y" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0003.png" id="3_yeb7e"]
-[ext_resource type="Texture2D" uid="uid://o0xdmmp7whew" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0004.png" id="4_bvtii"]
-[ext_resource type="Texture2D" uid="uid://cm80ajdd7foe3" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0005.png" id="5_qckb4"]
-[ext_resource type="Texture2D" uid="uid://b7flt743l743f" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0006.png" id="6_bn5v5"]
-[ext_resource type="Texture2D" uid="uid://dx76m3q7shukv" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0007.png" id="7_sc8mj"]
-[ext_resource type="Texture2D" uid="uid://ov2hcohcw1tu" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0008.png" id="8_25i82"]
-[ext_resource type="Texture2D" uid="uid://ddrhixjs48ep5" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0009.png" id="9_ykhin"]
-[ext_resource type="Texture2D" uid="uid://hqaqb07dgcki" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0010.png" id="10_gy02e"]
-[ext_resource type="Texture2D" uid="uid://wurmiu7i8o6e" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0011.png" id="11_wct48"]
-[ext_resource type="Texture2D" uid="uid://3vadyanyrm3g" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0012.png" id="12_cshwv"]
-[ext_resource type="Texture2D" uid="uid://bes81d7k3o0l6" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0001.png" id="13_f5e3q"]
-[ext_resource type="Texture2D" uid="uid://dw7a8psemgwfe" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0002.png" id="14_e7upy"]
-[ext_resource type="Texture2D" uid="uid://bkdlr37n3fsa5" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0003.png" id="15_g44cu"]
-[ext_resource type="Texture2D" uid="uid://mli1hxwhjjxy" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0004.png" id="16_pus73"]
-[ext_resource type="Texture2D" uid="uid://bne3smu23gid" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0005.png" id="17_3fkj5"]
-[ext_resource type="Texture2D" uid="uid://bf5roamlp7gs6" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0006.png" id="18_smeap"]
-[ext_resource type="Texture2D" uid="uid://dipst3q4o4gj1" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0007.png" id="19_7y64p"]
-[ext_resource type="Texture2D" uid="uid://4byxpsn3b3e4" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0008.png" id="20_hlgm7"]
-[ext_resource type="Texture2D" uid="uid://cnpkxo03dvfxf" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0009.png" id="21_3xwdf"]
-[ext_resource type="Texture2D" uid="uid://b385eqhep11lj" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0010.png" id="22_fernc"]
-[ext_resource type="Texture2D" uid="uid://cby1eh7v1o64q" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0011.png" id="23_i16hu"]
-[ext_resource type="Texture2D" uid="uid://brvit7jlkp08b" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0012.png" id="24_j2f8x"]
-[ext_resource type="Texture2D" uid="uid://dr8ddu8qeueg" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0001.png" id="25_mt2ob"]
-[ext_resource type="Texture2D" uid="uid://bm61aaxd0r628" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0002.png" id="26_gnqx4"]
-[ext_resource type="Texture2D" uid="uid://cbm2by00t33gt" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0003.png" id="27_aoncl"]
-[ext_resource type="Texture2D" uid="uid://wa7q3ydm4x4m" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0004.png" id="28_wsvfm"]
-[ext_resource type="Texture2D" uid="uid://bkxb6esso6fuy" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0005.png" id="29_hvic8"]
-[ext_resource type="Texture2D" uid="uid://b8n4iy4wb3odd" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0006.png" id="30_nkjgv"]
-[ext_resource type="Texture2D" uid="uid://btc8xm3m0n0p3" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0007.png" id="31_m2tp1"]
-[ext_resource type="Texture2D" uid="uid://c88xy5aux3oir" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0008.png" id="32_yl2fr"]
-[ext_resource type="Texture2D" uid="uid://bd7kkxkaypd7t" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0009.png" id="33_a04tp"]
-[ext_resource type="Texture2D" uid="uid://r17j7aaoxdly" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0010.png" id="34_47p2r"]
-[ext_resource type="Texture2D" uid="uid://hiiebudtjyeh" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0011.png" id="35_k26ov"]
-[ext_resource type="Texture2D" uid="uid://bdhie2cynpryk" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0012.png" id="36_3i87u"]
+[ext_resource type="Texture2D" uid="uid://bvxdt36siydwi" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0002.png" id="2_hkehv"]
+[ext_resource type="Texture2D" uid="uid://c4thssjtlwqmo" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0003.png" id="3_yeb7e"]
+[ext_resource type="Texture2D" uid="uid://bck15xohbhokq" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0004.png" id="4_bvtii"]
+[ext_resource type="Texture2D" uid="uid://blkdlgu1uggvk" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0005.png" id="5_qckb4"]
+[ext_resource type="Texture2D" uid="uid://tc7pyqf30psv" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0006.png" id="6_bn5v5"]
+[ext_resource type="Texture2D" uid="uid://dmd0sg7fbysan" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0007.png" id="7_sc8mj"]
+[ext_resource type="Texture2D" uid="uid://b61su3jm55c51" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0008.png" id="8_25i82"]
+[ext_resource type="Texture2D" uid="uid://b7orfyqpwmvs5" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0009.png" id="9_ykhin"]
+[ext_resource type="Texture2D" uid="uid://dxma1qnvmjbrd" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0010.png" id="10_gy02e"]
+[ext_resource type="Texture2D" uid="uid://cnravbgb1jrkg" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0011.png" id="11_wct48"]
+[ext_resource type="Texture2D" uid="uid://babm7umf05wao" path="res://Assets/Animation/Fucking/chris/chris_arm/chris_arm_0012.png" id="12_cshwv"]
+[ext_resource type="Texture2D" uid="uid://byvq5ntxri6pq" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0001.png" id="13_f5e3q"]
+[ext_resource type="Texture2D" uid="uid://2netg1fb8gse" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0002.png" id="14_e7upy"]
+[ext_resource type="Texture2D" uid="uid://c8ejkmlo0jsg1" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0003.png" id="15_g44cu"]
+[ext_resource type="Texture2D" uid="uid://c38kiglcbcbje" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0004.png" id="16_pus73"]
+[ext_resource type="Texture2D" uid="uid://cagnaqyj2jxsd" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0005.png" id="17_3fkj5"]
+[ext_resource type="Texture2D" uid="uid://bhmacfg54aunn" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0006.png" id="18_smeap"]
+[ext_resource type="Texture2D" uid="uid://dtustxi1rps43" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0007.png" id="19_7y64p"]
+[ext_resource type="Texture2D" uid="uid://dp0miw07iogpu" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0008.png" id="20_hlgm7"]
+[ext_resource type="Texture2D" uid="uid://ufmrpdt20rcs" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0009.png" id="21_3xwdf"]
+[ext_resource type="Texture2D" uid="uid://b0bnyqpiau10h" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0010.png" id="22_fernc"]
+[ext_resource type="Texture2D" uid="uid://b4s1fvq8bpb14" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0011.png" id="23_i16hu"]
+[ext_resource type="Texture2D" uid="uid://b7pknnll5rj1q" path="res://Assets/Animation/Fucking/chris/chris_noelbow/chris_noelbow_0012.png" id="24_j2f8x"]
+[ext_resource type="Texture2D" uid="uid://cysk61ngrivtx" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0001.png" id="25_mt2ob"]
+[ext_resource type="Texture2D" uid="uid://caem4awd5j3mm" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0002.png" id="26_gnqx4"]
+[ext_resource type="Texture2D" uid="uid://b8xtievs686jy" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0003.png" id="27_aoncl"]
+[ext_resource type="Texture2D" uid="uid://0tamm4cdb543" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0004.png" id="28_wsvfm"]
+[ext_resource type="Texture2D" uid="uid://dkrtythiqv2s5" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0005.png" id="29_hvic8"]
+[ext_resource type="Texture2D" uid="uid://bamjlyocxnypg" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0006.png" id="30_nkjgv"]
+[ext_resource type="Texture2D" uid="uid://c3f7ii1r8e2ax" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0007.png" id="31_m2tp1"]
+[ext_resource type="Texture2D" uid="uid://bcby6jffvhty2" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0008.png" id="32_yl2fr"]
+[ext_resource type="Texture2D" uid="uid://ch48u1eiudfqi" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0009.png" id="33_a04tp"]
+[ext_resource type="Texture2D" uid="uid://kxtyi0gdqs8t" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0010.png" id="34_47p2r"]
+[ext_resource type="Texture2D" uid="uid://onaliy6e5slh" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0011.png" id="35_k26ov"]
+[ext_resource type="Texture2D" uid="uid://dikci12i73dta" path="res://Assets/Animation/Fucking/chris/chris_elbow/chris_elbow_0012.png" id="36_3i87u"]
 
 [resource]
 animations = [{
@@ -75,6 +75,47 @@ animations = [{
 "loop": true,
 "name": &"Arm",
 "speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_mt2ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gnqx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_aoncl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_wsvfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hvic8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nkjgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_m2tp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_yl2fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_a04tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_47p2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_k26ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3i87u")
+}],
+"loop": true,
+"name": &"elbow",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
