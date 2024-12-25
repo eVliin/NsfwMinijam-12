@@ -71,24 +71,25 @@ func _apply_material(sub_child: MeshInstance3D, node_name: String) -> void:
 			sub_child.material_override = white if node_name in ["Box", "Lid"] else red
 
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("Zoom_in")) \
-	&& global_position.z <= 4:
-		global_position.z += 1
-	if (Input.is_action_just_pressed("Zoom_out")) \
-	&& global_position.z >= -10.4:
-		global_position.z -= 1
-	if input:
-		if (Input.is_action_just_pressed("Select")):
-			rotating = true
-			prev_mouse_position = get_viewport().get_mouse_position()
-	if (Input.is_action_just_released("Select")):
-		rotating = false
-	
-	if (rotating):
-		next_mouse_position = get_viewport().get_mouse_position()
-		rotate_y((next_mouse_position.x - prev_mouse_position.x) * .3 * delta)
-		rotate_x((next_mouse_position.y - prev_mouse_position.y) * .3 * delta)
-		prev_mouse_position = next_mouse_position
+	if Global.player_has_control:
+		if (Input.is_action_just_pressed("Zoom_in")) \
+		&& global_position.z <= 4:
+			global_position.z += 1
+		if (Input.is_action_just_pressed("Zoom_out")) \
+		&& global_position.z >= -10.4:
+			global_position.z -= 1
+		if input:
+			if (Input.is_action_just_pressed("Select")):
+				rotating = true
+				prev_mouse_position = get_viewport().get_mouse_position()
+		if (Input.is_action_just_released("Select")):
+			rotating = false
+		
+		if (rotating):
+			next_mouse_position = get_viewport().get_mouse_position()
+			rotate_y((next_mouse_position.x - prev_mouse_position.x) * .3 * delta)
+			rotate_x((next_mouse_position.y - prev_mouse_position.y) * .3 * delta)
+			prev_mouse_position = next_mouse_position
 
 
 func _on_mouse_entered() -> void:

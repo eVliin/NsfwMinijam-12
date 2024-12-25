@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://i6i41cnyq4sb"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Rush/piece.gd" id="1_fhbel"]
+[ext_resource type="Texture2D" uid="uid://bh06ugqu2j2n6" path="res://Scenes/Minigames/Rush/rush1x2.png" id="2_ca787"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q7a1"]
+size = Vector2(50, 100)
+
+[node name="Piece 1x2" type="Node2D" groups=["pickable"]]
+position = Vector2(50, -49)
+script = ExtResource("1_fhbel")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.79, 0.79, 1)
+position = Vector2(-3, -5)
+rotation = 0.0174533
+scale = Vector2(0.91, 1)
+texture = ExtResource("2_ca787")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(50, 25)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_2q7a1")

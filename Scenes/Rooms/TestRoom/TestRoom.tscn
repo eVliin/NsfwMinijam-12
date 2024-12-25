@@ -147,3 +147,21 @@ z_index = 10
 visible = false
 clip_children = 1
 z_index = 4
+
+[node name="Label2" type="Label" parent="Camera2D/MinigameLayer"]
+z_index = 5
+offset_right = 349.0
+offset_bottom = 37.0
+text = "No Fucking Minigame yet :(
+Press Spacebar to remove a fucker and reset its timer"
+
+[node name="Label" type="Label" parent="Camera2D/MinigameLayer"]
+z_index = 5
+offset_left = 209.0
+offset_top = 323.0
+offset_right = 638.0
+offset_bottom = 360.0
+size_flags_horizontal = 3
+text = "Agrro level: 1
+press up or down to change it (yes you are helping me debug this)"
+horizontal_alignment = 2

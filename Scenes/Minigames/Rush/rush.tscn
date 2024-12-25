@@ -1,84 +1,27 @@
-[gd_scene load_steps=10 format=3 uid="uid://djknkme8gimtb"]
+[gd_scene load_steps=4 format=3 uid="uid://djknkme8gimtb"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Rush/rush.gd" id="1_ipb5t"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Rush/piece.gd" id="1_w06ji"]
 [ext_resource type="Texture2D" uid="uid://xvhfq62isowe" path="res://Scenes/Minigames/Rush/rushbg.png" id="2_cu7j3"]
-[ext_resource type="Texture2D" uid="uid://bw4wrcmdj8cwp" path="res://Scenes/Minigames/Rush/rush1x4.png" id="4_dqkg0"]
-[ext_resource type="Texture2D" uid="uid://bh06ugqu2j2n6" path="res://Scenes/Minigames/Rush/rush1x2.png" id="4_en7ch"]
-[ext_resource type="Texture2D" uid="uid://dwo68a8c0cmdj" path="res://Scenes/Minigames/Rush/rush1x3.png" id="5_3mko6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpi8j"]
-size = Vector2(50, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2d78"]
-size = Vector2(50, 150)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q7a1"]
-size = Vector2(50, 100)
+[ext_resource type="PackedScene" uid="uid://i6i41cnyq4sb" path="res://Scenes/Minigames/Rush/piece.tscn" id="2_xqtrg"]
 
 [node name="Rush" type="Node2D"]
 script = ExtResource("1_ipb5t")
+tile_scene = ExtResource("2_xqtrg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Board" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -6)
 scale = Vector2(0.9, 1.04)
 texture = ExtResource("2_cu7j3")
 
 [node name="Pieces" type="Node2D" parent="."]
-
-[node name="Piece 1x4" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(50, 73)
-script = ExtResource("1_w06ji")
-
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/Piece 1x4"]
-position = Vector2(-102, -26)
-scale = Vector2(0.906665, 1.10909)
-texture = ExtResource("4_dqkg0")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x4"]
-visible = false
-position = Vector2(0, 3)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_lpi8j")
-
-[node name="Piece 1x3" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(75, 26)
-script = ExtResource("1_w06ji")
-
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/Piece 1x3"]
-position = Vector2(-75.9999, -28.0175)
-rotation = 0.0174533
-scale = Vector2(0.856, 1)
-texture = ExtResource("5_3mko6")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x3"]
-visible = false
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_y2d78")
-
-[node name="Piece 1x2" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(50, -49)
-script = ExtResource("1_w06ji")
-
-[node name="Sprite2D" type="Sprite2D" parent="Pieces/Piece 1x2"]
-self_modulate = Color(1, 0.79, 0.79, 1)
-position = Vector2(-3, -5)
-rotation = 0.0174533
-scale = Vector2(0.91, 1)
-texture = ExtResource("4_en7ch")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x2"]
-visible = false
-position = Vector2(50, 25)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_2q7a1")
+position = Vector2(-150, -150)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-150, 150, -150, -150, 150, -150, 150, 150, 204, 182, 204, -180, -226, -180, -228, 180, 204, 183, 150, 150)
+disabled = true

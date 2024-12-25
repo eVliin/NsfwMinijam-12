@@ -5,6 +5,7 @@
 
 [node name="MinigamePresent" type="Node2D" groups=["Minigames"]]
 visible = false
+z_index = 3
 script = ExtResource("1_dc6tb")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]

@@ -28,6 +28,23 @@ func _pop_close():
 		set_process_input(true)
 		$Camera2D.set_process_input(true)
 
+var _point : int = 0
+
+@export var point : int:
+	set(value):
+		_point = value
+		$Camera2D/MinigameLayer/Label.text=str("Agrro level: ", value, "
+		press up or down to change it (yes you are helping me debug this)")
+
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_up"):
-		print("buceta")
+	if Input.is_action_just_pressed("ui_up") && $"Puppets/0".aggro < 5:
+		$"Puppets/0".aggro += 1
+		$"Puppets/1".aggro += 1
+		$"Puppets/2".aggro += 1
+		point = $"Puppets/0".aggro
+	
+	if Input.is_action_just_pressed("ui_down") && $"Puppets/0".aggro > 1:
+		$"Puppets/0".aggro -= 1
+		$"Puppets/1".aggro -= 1
+		$"Puppets/2".aggro -= 1
+		point = $"Puppets/0".aggro

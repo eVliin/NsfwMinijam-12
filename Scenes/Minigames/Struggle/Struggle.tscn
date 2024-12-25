@@ -28,10 +28,10 @@ tracks/1/path = NodePath("SubViewport/Jorking_Puppet:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.166667, 0.25),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.166667, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(0.701961, 0.701961, 0.701961, 0), Color(0.701961, 0.701961, 0.701961, 1)]
+"values": [Color(0.701961, 0.701961, 0.701961, 0), Color(0.701961, 0.701961, 0.701961, 0), Color(0.701961, 0.701961, 0.701961, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -40,10 +40,10 @@ tracks/2/path = NodePath("SubViewport/Arm:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.166667, 0.17),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.166667, 0.17),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(0.701961, 0.701961, 0.701961, 0), Color(0.7, 0.7, 0.7, 1)]
+"values": [Color(0.701961, 0.701961, 0.701961, 0), Color(0.701961, 0.701961, 0.701961, 0), Color(0.7, 0.7, 0.7, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -52,10 +52,10 @@ tracks/3/path = NodePath(".:elbow")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.1667, 0.17),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1667, 0.17),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [true, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_nqb8r"]
@@ -173,7 +173,7 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
+position = Vector2(67, -3)
 texture = SubResource("AtlasTexture_xrywb")
 centered = false
 
