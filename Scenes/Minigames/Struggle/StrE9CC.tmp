@@ -7,7 +7,7 @@
 [ext_resource type="SpriteFrames" uid="uid://bhp4sjpjbus1m" path="res://Assets/Animation/Fucking/puppet_back/BackshotPuppet.tres" id="2_gslev"]
 
 [sub_resource type="Animation" id="Animation_u5vj6"]
-resource_name = "1"
+resource_name = "0"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -59,7 +59,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_nqb8r"]
-resource_name = "2"
+resource_name = "1"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -151,8 +151,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gfwqw"]
 _data = {
-"1": SubResource("Animation_u5vj6"),
-"2": SubResource("Animation_nqb8r"),
+"0": SubResource("Animation_u5vj6"),
+"1": SubResource("Animation_nqb8r"),
 "RESET": SubResource("Animation_v7r1i")
 }
 

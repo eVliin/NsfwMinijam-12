@@ -15,17 +15,17 @@ size = Vector3(0.331787, 0.321289, 0.326172)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, -0.006)
 
 [node name="PuzzleRibb" parent="." instance=ExtResource("3_jkukm")]
-transform = Transform3D(1, 0, 0, 0, 0.999233, -0.0391552, 0, 0.0391552, 0.999233, 0, 0, 0.160525)
+transform = Transform3D(1, 0, 0, 0, 0.997061, -0.0766146, 0, 0.0766146, 0.997061, 0, 0, 0.162371)
 type = "rush"
 
 [node name="PuzzleRibb2" parent="." instance=ExtResource("3_jkukm")]
-transform = Transform3D(-4.37114e-08, 0.0383878, 0.999263, 0, 0.999263, -0.0383878, -1, -1.67798e-09, -4.36792e-08, 0.161, 0, 0)
+transform = Transform3D(-4.36262e-08, 0.100657, 0.994921, 2.72715e-09, 0.994921, -0.100657, -1, -1.67798e-09, -4.36792e-08, 0.161, 0, 0)
 
 [node name="PuzzleRibb3" parent="." instance=ExtResource("3_jkukm")]
-transform = Transform3D(-4.37114e-08, -0.0383878, -0.999263, 0, 0.999263, -0.0383878, 1, -1.67798e-09, -4.36792e-08, -0.161, 0, 0)
+transform = Transform3D(-4.36501e-08, -0.0912235, -0.99583, -2.31358e-09, 0.99583, -0.0912235, 1, -1.67798e-09, -4.36792e-08, -0.161, 0, 0)
 
 [node name="PuzzleRibb4" parent="." instance=ExtResource("3_jkukm")]
-transform = Transform3D(-0.999848, -0.00188485, -0.0173503, 0, 0.994151, -0.107999, 0.0174524, -0.107983, -0.993999, 0, 0, -0.161)
+transform = Transform3D(-0.999848, -0.00188485, -0.0173503, 0.0011384, 0.98499, -0.172607, 0.0174152, -0.1726, -0.984837, 0, 0, -0.161)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_5bm8m")

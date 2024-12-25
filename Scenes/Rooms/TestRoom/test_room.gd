@@ -26,6 +26,7 @@ func _pop_close():
 	popUpTrack -= 1
 	if popUpTrack <= 0:
 		set_process_input(true)
+		$Camera2D.set_process_input(true)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_up"):

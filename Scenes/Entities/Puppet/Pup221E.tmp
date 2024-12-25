@@ -10,4 +10,4 @@ aggro = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_rjhtc")
-animation = &"0"
+animation = &"1"

@@ -9,3 +9,4 @@ signal present_close
 signal get_mouse_world_pos
 signal define_puzzles
 signal attacking
+signal puppet_cummed

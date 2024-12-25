@@ -3,6 +3,3 @@
 [ext_resource type="PackedScene" uid="uid://dx60hgdsbul3y" path="res://Assets/PLaceholder/present/Ribbon_L.glb" id="1_1no15"]
 
 [node name="Ribbon_L" instance=ExtResource("1_1no15")]
-
-[node name="Noh_004" parent="." index="0"]
-cast_shadow = 2
