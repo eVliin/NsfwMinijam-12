@@ -1,35 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://djknkme8gimtb"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Rush/rush.gd" id="1_ipb5t"]
-[ext_resource type="Script" path="res://Scenes/Minigames/Rush/piece.gd" id="1_w06ji"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q7a1"]
+[ext_resource type="Texture2D" uid="uid://xvhfq62isowe" path="res://Scenes/Minigames/Rush/rushbg.png" id="2_cu7j3"]
+[ext_resource type="PackedScene" uid="uid://i6i41cnyq4sb" path="res://Scenes/Minigames/Rush/piece.tscn" id="2_xqtrg"]
 
 [node name="Rush" type="Node2D"]
 script = ExtResource("1_ipb5t")
-
-[node name="Board" type="Sprite2D" parent="."]
-
-[node name="Pieces" type="Node2D" parent="."]
-
-[node name="Piece 1x2" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-script = ExtResource("1_w06ji")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x2"]
-shape = SubResource("RectangleShape2D_2q7a1")
-
-[node name="Piece 1x3" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(27, 1)
-script = ExtResource("1_w06ji")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x3"]
-shape = SubResource("RectangleShape2D_2q7a1")
-
-[node name="Piece 1x4" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(15, -25)
-script = ExtResource("1_w06ji")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x4"]
-shape = SubResource("RectangleShape2D_2q7a1")
+tile_scene = ExtResource("2_xqtrg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Board" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -6)
+scale = Vector2(0.9, 1.04)
+texture = ExtResource("2_cu7j3")
+
+[node name="Pieces" type="Node2D" parent="."]
+position = Vector2(-150, -150)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-150, 150, -150, -150, 150, -150, 150, 150, 204, 182, 204, -180, -226, -180, -228, 180, 204, 183, 150, 150)
+disabled = true

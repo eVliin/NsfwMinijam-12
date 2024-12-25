@@ -29,7 +29,8 @@ func _ready() -> void:
 
 # Função para definir o estado "elbow" (cotovelo)
 func _set_elbow(value: bool) -> void:
-	var start_time = chris_base.frame_progress  # Salva o progresso atual da animação
+	var current_frame = chris_base.get_frame()
+	var start_time = chris_base.get_frame_progress()  # Salva o progresso atual da animação
 	_elbow = value  # Atualiza o estado interno
 	print("Elbow status:", _elbow)
 
@@ -41,8 +42,8 @@ func _set_elbow(value: bool) -> void:
 
 	# Sincroniza outras animações
 	frontshot_puppet_hand.play("default")
-	frontshot_puppet_hand.frame_progress = start_time
-	chris_base.frame_progress = start_time
+	frontshot_puppet_hand.set_frame_and_progress(current_frame, start_time)
+	chris_base.set_frame_and_progress(current_frame, start_time)
 
 # Manipula o início das animações (atualiza o estado de "busy")
 func _on_animation_started(_animation_name: String) -> void:
@@ -60,6 +61,7 @@ func _on_pop() -> void:
 		match Global.AttackTrack:
 			1:
 				show()
+				Global.player_has_control = false
 				SignalBus.emit_signal("pop_open")
 			2, 3:
 				animation_player.play(str(Global.AttackTrack - 1))  # Toca animações específicas
@@ -74,6 +76,7 @@ func cummed() -> void:
 		match Global.AttackTrack:
 			1:
 				hide()
+				Global.player_has_control = true
 			2, 3:
 				animation_player.play_backwards(str(Global.AttackTrack - 1))  # Reverte animações
 
