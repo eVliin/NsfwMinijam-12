@@ -29,14 +29,13 @@ texture = ExtResource("2_cu7j3")
 [node name="Pieces" type="Node2D" parent="."]
 
 [node name="Piece 1x4" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(50, 73)
+position = Vector2(46, 73)
 script = ExtResource("1_w06ji")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pieces/Piece 1x4"]
-position = Vector2(-102, -26)
-scale = Vector2(0.906665, 1.10909)
+position = Vector2(-0.973328, 2.94546)
+scale = Vector2(0.946667, 1.10909)
 texture = ExtResource("4_dqkg0")
-centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x4"]
 visible = false
@@ -45,15 +44,14 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_lpi8j")
 
 [node name="Piece 1x3" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(75, 26)
+position = Vector2(72, 26)
 script = ExtResource("1_w06ji")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pieces/Piece 1x3"]
-position = Vector2(-75.9999, -28.0175)
+position = Vector2(0, 1)
 rotation = 0.0174533
-scale = Vector2(0.856, 1)
+scale = Vector2(0.91954, 1)
 texture = ExtResource("5_3mko6")
-centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x3"]
 visible = false
@@ -61,20 +59,16 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_y2d78")
 
 [node name="Piece 1x2" type="RigidBody2D" parent="Pieces" groups=["pickable"]]
-position = Vector2(50, -49)
+position = Vector2(98, -24)
 script = ExtResource("1_w06ji")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pieces/Piece 1x2"]
 self_modulate = Color(1, 0.79, 0.79, 1)
-position = Vector2(-3, -5)
-rotation = 0.0174533
-scale = Vector2(0.91, 1)
+position = Vector2(-1, 0)
 texture = ExtResource("4_en7ch")
-centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pieces/Piece 1x2"]
 visible = false
-position = Vector2(50, 25)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_2q7a1")
 

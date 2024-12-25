@@ -173,6 +173,7 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = SubResource("AtlasTexture_xrywb")
 centered = false
 
