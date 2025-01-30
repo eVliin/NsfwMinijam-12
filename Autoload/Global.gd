@@ -11,6 +11,7 @@ var game_controller : GameController
 var player_has_control : bool
 var mouse = Vector2()
 var AttackOrder :Array
+var is_dragging :bool = false
 
 
 

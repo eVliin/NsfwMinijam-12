@@ -1,16 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://i6i41cnyq4sb"]
+[gd_scene load_steps=6 format=3 uid="uid://i6i41cnyq4sb"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Rush/piece.gd" id="1_fhbel"]
-[ext_resource type="Texture2D" uid="uid://bh06ugqu2j2n6" path="res://Scenes/Minigames/Rush/rush1x2.png" id="2_ca787"]
+[ext_resource type="Texture2D" uid="uid://bh06ugqu2j2n6" path="res://Scenes/Minigames/Rush/rushRed.png" id="2_ca787"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q7a1"]
-size = Vector2(50, 100)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnww7"]
+size = Vector2(100, 50)
 
-[node name="Piece 1x2" type="Node2D" groups=["pickable"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxsyp"]
+size = Vector2(150, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bbtg"]
+size = Vector2(200, 50)
+
+[node name="Piece" type="Node2D" groups=["pickable"]]
 position = Vector2(50, -49)
 script = ExtResource("1_fhbel")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="h" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0.79, 0.79, 1)
 position = Vector2(-3, -5)
 rotation = 0.0174533
@@ -18,8 +24,34 @@ scale = Vector2(0.91, 1)
 texture = ExtResource("2_ca787")
 centered = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="v" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.79, 0.79, 1)
+position = Vector2(53, -5)
+rotation = 1.58825
+scale = Vector2(0.91, 1)
+skew = -0.0610865
+texture = ExtResource("2_ca787")
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
 visible = false
+
+[node name="2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(50, 25)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_2q7a1")
+shape = SubResource("RectangleShape2D_nnww7")
+disabled = true
+
+[node name="3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(75, 25)
+shape = SubResource("RectangleShape2D_wxsyp")
+disabled = true
+
+[node name="4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100, 25)
+shape = SubResource("RectangleShape2D_6bbtg")
+disabled = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
