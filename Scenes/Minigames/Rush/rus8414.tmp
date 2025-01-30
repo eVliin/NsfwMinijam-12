@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://djknkme8gimtb"]
-
-[ext_resource type="Script" path="res://Scenes/Minigames/Rush/rush.gd" id="1_ipb5t"]
-
-[node name="Rush" type="Node2D"]
-script = ExtResource("1_ipb5t")

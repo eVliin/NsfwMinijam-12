@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddty504wxl5ts"
-path="res://.godot/imported/rush1x2.png-ef34b5d860bc8e231ec20bb8b044be03.ctex"
+uid="uid://bh06ugqu2j2n6"
+path="res://.godot/imported/rushRed.png-21d3e8ed28889ce99fb015d2ce0d23f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Minigames/Rush/rush1x2.png"
-dest_files=["res://.godot/imported/rush1x2.png-ef34b5d860bc8e231ec20bb8b044be03.ctex"]
+source_file="res://Scenes/Minigames/Rush/rushRed.png"
+dest_files=["res://.godot/imported/rushRed.png-21d3e8ed28889ce99fb015d2ce0d23f9.ctex"]
 
 [params]
 

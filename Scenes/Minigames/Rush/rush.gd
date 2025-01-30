@@ -3,21 +3,70 @@ extends Node2D
 # Path to the database file
 @export var database_path: String = "res://Scenes/Minigames/Rush/filtered_puzzles.txt"
 
-# Grid and tile settings
-@export var grid_dimensions: Vector2i = Vector2i(6, 6)  # Default grid size (6x6)
-@export var cell_size: int = 50  # Size of each cell in pixels
-@onready var grid_parent = $Pieces  # A Node2D to hold grid elements
-@export var tile_scene: PackedScene  # Drag-and-drop tiles (e.g., a Sprite2D scene)
+const BOARD_SIZE = Vector2i(6, 6)  # Dimensão fixa do tabuleiro 6x6
+const TILE_SIZE = 50  # Tamanho de cada tile em pixels
 
-func _ready() -> void:
-	# Load and parse the file
-	var puzzles = load_puzzles(database_path)
-	if puzzles.size() > 0:
-		# Pick a random puzzle
-		var random_puzzle = puzzles[randi() % puzzles.size()]
-		initialize_grid(random_puzzle)
-	else:
-		print("No puzzles found in the file.")
+var pieces = []  # Lista para armazenar as peças detectadas
+
+func load_board_from_string(board_desc: String):
+	"""
+	Converte a string do tabuleiro em uma matriz e detecta as peças
+	"""
+	var board_matrix = []  # Matriz 6x6 para armazenar o estado do tabuleiro
+	var piece_positions = {}  # Dicionário para armazenar posições de peças
+	
+	# Converter a string em uma matriz 6x6
+	for y in range(BOARD_SIZE.y):
+		var row = []
+		for x in range(BOARD_SIZE.x):
+			var index = y * BOARD_SIZE.x + x
+			var char = board_desc[index]
+			row.append(char)
+			
+			# Armazena posições das peças
+			if char != 'o' and char != 'x':
+				if not piece_positions.has(char):
+					piece_positions[char] = []
+				piece_positions[char].append(Vector2i(x, y))
+		board_matrix.append(row)
+	
+	detect_pieces(piece_positions)
+	return board_matrix
+
+func detect_pieces(piece_positions: Dictionary):
+	"""
+	Analisa as peças detectadas e define suas propriedades
+	"""
+	for key in piece_positions.keys():
+		var positions = piece_positions[key]
+		var size = positions.size()
+		
+		# Determina se a peça é horizontal ou vertical
+		var horizontal = size > 1 and positions[1].x - positions[0].x == 1
+		
+		# Verifica se a peça é vermelha (tipo 'A')
+		var is_red = (key == 'A')
+		
+		var piece_data = {
+			"tipo": key,
+			"posicao": positions[0],  # Posição inicial
+			"tamanho": size,
+			"horizontal": horizontal,
+			"is_red": is_red  # Define a propriedade is_red
+		}
+		pieces.append(piece_data)
+
+func place_pieces():
+	"""
+	Cria as instâncias das peças e as adiciona ao tabuleiro
+	"""
+	for piece in pieces:
+		var piece_instance = preload("res://Scenes/Minigames/Rush/piece.tscn").instantiate()
+		piece_instance.position = piece["posicao"] * TILE_SIZE
+		piece_instance.size = piece["tamanho"]
+		piece_instance.horizontal = piece["horizontal"]
+		piece_instance.is_red = piece["is_red"]  # Passa a propriedade is_red
+		$pieces.add_child(piece_instance)
 
 # Function to load puzzles from the file
 func load_puzzles(file_path: String) -> Array:
@@ -37,29 +86,21 @@ func load_puzzles(file_path: String) -> Array:
 	
 	return puzzles
 
-# Function to initialize the grid with the puzzle layout
-func initialize_grid(puzzle: String) -> void:
-	for y in range(grid_dimensions.y):
-		for x in range(grid_dimensions.x):
-			var index = y * grid_dimensions.x + x
-			if index < puzzle.length():
-				var cxhar = puzzle[index]
-				if cxhar != "o":  # Skip empty cells
-					var tile = tile_scene.instantiate()
-					tile.position = Vector2(x * cell_size, y * cell_size)
-					tile.name = "%d_%d" % [x, y]  # Name the tile based on grid coordinates
-					
-					# Determine rotation based on character (example logic below)
-					tile.rotation = get_rotation_from_character(cxhar)
-
-					grid_parent.add_child(tile)
-
-# Function to determine rotation based on the puzzle character
-func get_rotation_from_character(cxhar: String) -> float:
-	# Example logic: Map characters to rotation angles (in radians)
-	match cxhar:
-		"H":  return 0    # No rotation
-		"V":  return PI / 2  # 90 degrees
-		"L":  return PI     # 180 degrees
-		"D":  return -PI / 2  # -90 degrees (270 degrees)
-		_ :   return 0    # Default to no rotation
+func _ready():
+	"""
+	Executado ao iniciar a cena
+	"""
+	
+	var random_puzzle
+	
+	# Load and parse the file
+	var puzzles = load_puzzles(database_path)
+	if puzzles.size() > 0:
+		# Pick a random puzzle
+		random_puzzle = puzzles[randi() % puzzles.size()]
+	else:
+		print("No puzzles found in the file.")
+	
+	var board_desc = random_puzzle
+	load_board_from_string(board_desc)
+	place_pieces()
