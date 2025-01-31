@@ -1,7 +1,7 @@
-extends Node2D
+extends SubViewportContainer
 
 @onready var presents: Node = get_parent().get_parent().get_parent().get_node('Presents')
-@onready var present: StaticBody3D = $SubViewportContainer/SubViewport/Minigame/Present
+@onready var present: StaticBody3D = $SubViewport/Minigame/Present
 
 signal color_set
 
@@ -10,9 +10,10 @@ var defined: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hide()
 	present.color = presents.get_child(name.to_int()).color
 	color_set.emit()
-	$SubViewportContainer/SubViewport.handle_input_locally = true
+	$SubViewport.handle_input_locally = true
 	SignalBus.define_puzzles.connect(_define_puzzles)
 	SignalBus.present_open.connect(_opened)
 	SignalBus.present_close.connect(_closed)

@@ -71,10 +71,9 @@ func _random_delay() -> void:
 func _on_animation_finished() -> void:
 	if animated_sprite_2d.animation == "2":
 		attack = true
+	if attack:
 		Global.AttackTrack += 1
 		SignalBus.emit_signal("attacking")
-
-	if attack:
 		Global.AttackOrder.push_front(self)
 	else:
 		_random_delay()

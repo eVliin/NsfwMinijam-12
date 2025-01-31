@@ -25,7 +25,7 @@ func _ready() -> void:
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if Global.player_has_control:
-		if event && Input.is_action_just_pressed("Select"):
+		if event.is_action_pressed("Select"):
 			SignalBus.present_open.emit(name)
 			SignalBus.pop_open.emit()
 			SignalBus.define_puzzles.emit(name, puzzles)

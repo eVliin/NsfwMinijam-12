@@ -62,7 +62,6 @@ func _on_pop() -> void:
 			1:
 				show()
 				Global.player_has_control = false
-				SignalBus.emit_signal("pop_open")
 			2, 3:
 				animation_player.play(str(Global.AttackTrack - 1))  # Toca animações específicas
 	else:
