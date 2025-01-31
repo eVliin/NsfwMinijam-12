@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://i6i41cnyq4sb"]
+[gd_scene load_steps=6 format=3 uid="uid://i6i41cnyq4sb"]
 
 [ext_resource type="Script" path="res://Scenes/Minigames/Rush/piece.gd" id="1_fhbel"]
 [ext_resource type="Texture2D" uid="uid://bh06ugqu2j2n6" path="res://Scenes/Minigames/Rush/rushRed.png" id="2_ca787"]
@@ -11,8 +11,6 @@ size = Vector2(150, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6bbtg"]
 size = Vector2(200, 50)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7opq"]
 
 [node name="Piece" type="Node2D" groups=["piece"]]
 position = Vector2(50, -49)
@@ -56,14 +54,6 @@ position = Vector2(100, 25)
 shape = SubResource("RectangleShape2D_6bbtg")
 disabled = true
 
-[node name="vicheck" type="Area2D" parent="Node2D"]
-collision_layer = 0
-collision_mask = 32768
-
-[node name="2" type="CollisionShape2D" parent="Node2D/vicheck"]
-position = Vector2(114, 25)
-shape = SubResource("RectangleShape2D_q7opq")
-
 [node name="RayCastBack" type="RayCast2D" parent="Node2D"]
 position = Vector2(-1, 25)
 rotation = 1.5708
@@ -83,4 +73,3 @@ collide_with_areas = true
 [connection signal="input_event" from="Node2D/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Node2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
-[connection signal="area_entered" from="Node2D/vicheck" to="." method="_on_vicheck_area_entered"]

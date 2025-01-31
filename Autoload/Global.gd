@@ -12,7 +12,14 @@ var player_has_control : bool
 var mouse = Vector2()
 var AttackOrder :Array
 var is_dragging :bool = false
-
+var _id_counter: int = 0
+var puzzleid: int:
+	get:
+		var current_id = _id_counter
+		_id_counter += 1
+		return current_id
+	set(value):
+		push_error("puzzleid é somente leitura!")
 
 
 

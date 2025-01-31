@@ -146,7 +146,7 @@ z_index = 10
 [node name="Struggle" parent="Camera2D/MinigameLayer" instance=ExtResource("6_4utjg")]
 visible = false
 clip_children = 1
-z_index = 5
+z_index = 4
 
 [node name="Label2" type="Label" parent="Camera2D/MinigameLayer"]
 z_index = 5
@@ -165,7 +165,3 @@ size_flags_horizontal = 3
 text = "Agrro level: 1
 press up or down to change it (yes you are helping me debug this)"
 horizontal_alignment = 2
-
-[node name="minigames" type="Node2D" parent="Camera2D/MinigameLayer"]
-z_index = 4
-position = Vector2(320, 180)

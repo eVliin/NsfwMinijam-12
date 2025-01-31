@@ -61,3 +61,5 @@ shape = SubResource("BoxShape3D_v13eb")
 
 [node name="Lock_" parent="." instance=ExtResource("8_coo0y")]
 transform = Transform3D(1, 0, 0, 0, 0.964072, 0.26564, 0, -0.26564, 0.964072, 0, -0.0310234, 0.00725875)
+
+[connection signal="input_event" from="Lock/Area3D" to="." method="_on_area_3d_input_event"]
