@@ -1,7 +1,7 @@
 extends Node3D
 
 const DIST = 1000
-@onready var minigame_present: Node2D = $"../../.."
+@onready var minigame_present = $"../.."
 
 func _ready() -> void:
 	SignalBus.get_mouse_world_pos.connect(get_mouse_world_pos)

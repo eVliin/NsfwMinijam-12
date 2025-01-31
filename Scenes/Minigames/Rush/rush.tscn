@@ -1,73 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://djknkme8gimtb"]
+[gd_scene load_steps=4 format=3 uid="uid://bm1a7ems1ce4q"]
 
-[ext_resource type="Script" path="res://Scenes/Minigames/Rush/rushview.gd" id="1_f3qp8"]
 [ext_resource type="Script" path="res://Scenes/Minigames/Rush/rush.gd" id="1_ipb5t"]
 [ext_resource type="Texture2D" uid="uid://xvhfq62isowe" path="res://Scenes/Minigames/Rush/rushbg.png" id="2_cu7j3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k4rr"]
-size = Vector2(58, 350)
+size = Vector2(377.571, 652.857)
 
-[node name="RushVp" type="SubViewportContainer" groups=["Minigames"]]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = -180.0
-offset_right = 320.0
-offset_bottom = 180.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_f3qp8")
-
-[node name="SubViewport" type="SubViewport" parent="."]
-disable_3d = true
-transparent_bg = true
-handle_input_locally = false
-physics_object_picking = true
-size = Vector2i(640, 360)
-render_target_update_mode = 4
-
-[node name="Rush" type="Node2D" parent="SubViewport"]
+[node name="Rush" type="Node2D"]
 script = ExtResource("1_ipb5t")
 
-[node name="Camera2D" type="Camera2D" parent="SubViewport/Rush"]
-scale = Vector2(1, 1)
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Board" type="Sprite2D" parent="SubViewport/Rush"]
+[node name="Board" type="Sprite2D" parent="."]
 position = Vector2(1, -1)
-scale = Vector2(1, 1)
 texture = ExtResource("2_cu7j3")
 
-[node name="pieces" type="Node2D" parent="SubViewport/Rush"]
+[node name="pieces" type="Node2D" parent="."]
 position = Vector2(-150, -150)
-scale = Vector2(1, 1)
 
-[node name="bounds" type="Area2D" parent="SubViewport/Rush"]
-scale = Vector2(1, 1)
+[node name="bounds" type="Area2D" parent="."]
 collision_layer = 16384
 collision_mask = 16384
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewport/Rush/bounds"]
-position = Vector2(-179, 0)
-shape = SubResource("RectangleShape2D_7k4rr")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="SubViewport/Rush/bounds"]
-position = Vector2(0, 179)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_7k4rr")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="SubViewport/Rush/bounds"]
-position = Vector2(0, -181)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_7k4rr")
-
-[node name="boundv" type="Area2D" parent="SubViewport/Rush"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bounds"]
+position = Vector2(-339.786, 26.4285)
 scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7k4rr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bounds"]
+position = Vector2(0, 339.714)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7k4rr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="bounds"]
+position = Vector2(0, -339.714)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7k4rr")
+
+[node name="boundv" type="Area2D" parent="."]
 collision_layer = 49152
 collision_mask = 16384
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="SubViewport/Rush/boundv"]
-position = Vector2(181, 0)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="boundv"]
+position = Vector2(343.714, 0)
 shape = SubResource("RectangleShape2D_7k4rr")
+
+[connection signal="input_event" from="bounds" to="." method="_on_bounds_input_event"]
+[connection signal="input_event" from="boundv" to="." method="_on_bounds_input_event"]

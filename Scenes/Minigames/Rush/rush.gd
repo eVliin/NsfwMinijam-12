@@ -1,5 +1,7 @@
 extends Node2D
 
+signal close
+
 # Path to the database file
 @export var database_path: String = "res://Scenes/Minigames/Rush/filtered_puzzles.txt"
 
@@ -104,3 +106,12 @@ func _ready():
 	var board_desc = random_puzzle
 	load_board_from_string(board_desc)
 	place_pieces()
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("Close"):
+		close.emit()
+		SignalBus.minigame_hide.emit()
+
+func _on_bounds_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if Input.is_action_just_released("Select"):
+		close.emit()
