@@ -164,7 +164,7 @@ resource_local_to_scene = true
 atlas = SubResource("ViewportTexture_0y7jt")
 region = Rect2(93, 0, 305, 360)
 
-[node name="Struggle" type="Node2D"]
+[node name="Struggle" type="Node2D" groups=["Minigames"]]
 script = ExtResource("1_8colx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

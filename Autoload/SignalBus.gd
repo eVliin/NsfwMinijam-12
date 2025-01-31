@@ -2,6 +2,7 @@ extends Node
 
 signal pause(is_paused : bool)
 
+signal minigame_show(id : int, type : String)
 signal pop_open
 signal pop_close
 signal present_open
