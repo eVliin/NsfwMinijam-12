@@ -13,12 +13,10 @@ func _ready() -> void:
 
 func _on_new_game_pressed() -> void:
 	"""Handle new game initialization"""
-	# Start fresh game state
-	Global.reset_game_state()
 	
 	# Load game world and UI
 	Global.game_controller.change_2d_scene(Global.TEST_ROOM)
-	await Global.game_controller.transitioned_out  # Wait for transition completion
+	await Global.game_controller.transitioned_in  # Wait for transition completion
 	Global.game_controller.change_gui_scene(Global.HUD, false, true)
 
 func _on_continue_pressed() -> void:

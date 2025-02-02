@@ -198,6 +198,7 @@ process_mode = 3
 
 [node name="PauseMenu" parent="GUI" instance=ExtResource("3_d2kxq")]
 process_mode = 3
+visible = false
 z_index = 5
 
 [node name="LoadManager" type="CanvasLayer" parent="."]

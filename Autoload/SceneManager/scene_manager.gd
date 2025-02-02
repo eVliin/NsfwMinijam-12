@@ -37,7 +37,6 @@ func _on_animation_player_animation_finished(anim_name: String) -> void:
 	match anim_name:
 		"in":
 			# Start loading animation after entrance transition
-			animation_player.play("Loading")
 			transitioned_in.emit()
 		"out":
 			# Notify when exit transition completes
