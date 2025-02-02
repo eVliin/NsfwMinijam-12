@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://y43gwjjbkmvj"
-path="res://.godot/imported/Knot.glb-49ae93b90e2d92ce634ab2cc16a3b766.scn"
+path="res://.godot/imported/Knot.glb-52e79db97dfab6bfd7423b00be670e57.scn"
 
 [deps]
 
-source_file="res://Assets/PLaceholder/present/Knot.glb"
-dest_files=["res://.godot/imported/Knot.glb-49ae93b90e2d92ce634ab2cc16a3b766.scn"]
+source_file="res://Assets/Placeholder/present/Knot.glb"
+dest_files=["res://.godot/imported/Knot.glb-52e79db97dfab6bfd7423b00be670e57.scn"]
 
 [params]
 

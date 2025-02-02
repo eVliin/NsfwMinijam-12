@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0wiwp0hyvikm"
-path.s3tc="res://.godot/imported/slide_albedo.png-443575a2cab47d9db00ab56949926332.s3tc.ctex"
-path.etc2="res://.godot/imported/slide_albedo.png-443575a2cab47d9db00ab56949926332.etc2.ctex"
+path.s3tc="res://.godot/imported/slide_albedo.png-1b77a5b65cced823a2c1b9e896d7b497.s3tc.ctex"
+path.etc2="res://.godot/imported/slide_albedo.png-1b77a5b65cced823a2c1b9e896d7b497.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/PLaceholder/present/Materials/slide_albedo.png"
-dest_files=["res://.godot/imported/slide_albedo.png-443575a2cab47d9db00ab56949926332.s3tc.ctex", "res://.godot/imported/slide_albedo.png-443575a2cab47d9db00ab56949926332.etc2.ctex"]
+source_file="res://Assets/Placeholder/present/Materials/slide_albedo.png"
+dest_files=["res://.godot/imported/slide_albedo.png-1b77a5b65cced823a2c1b9e896d7b497.s3tc.ctex", "res://.godot/imported/slide_albedo.png-1b77a5b65cced823a2c1b9e896d7b497.etc2.ctex"]
 
 [params]
 

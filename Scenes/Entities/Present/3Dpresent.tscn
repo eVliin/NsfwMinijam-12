@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0rpug8oir2ks"]
 
-[ext_resource type="PackedScene" uid="uid://ca0h1en8yxgif" path="res://Assets/PLaceholder/present/box.tscn" id="1_t001j"]
+[ext_resource type="PackedScene" uid="uid://ca0h1en8yxgif" path="res://Assets/Placeholder/present/box.tscn" id="1_t001j"]
 [ext_resource type="PackedScene" uid="uid://c46rsgv258oad" path="res://Scenes/Entities/Present/PuzzleRibb.tscn" id="3_jkukm"]
-[ext_resource type="PackedScene" uid="uid://bciqfvjrc5o57" path="res://Assets/PLaceholder/present/lid.tscn" id="3_ujyks"]
+[ext_resource type="PackedScene" uid="uid://bciqfvjrc5o57" path="res://Assets/Placeholder/present/lid.tscn" id="3_ujyks"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5bm8m"]
 size = Vector3(0.331787, 0.321289, 0.326172)

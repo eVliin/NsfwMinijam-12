@@ -1,88 +1,101 @@
+# PuppetController.gd
+# Manages puppet animations, attack patterns, and aggression levels
+
 extends Node2D
 
+### Resources & References ###
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-# Preloaded resources
+# Preloaded assets
 const PRESENT_BLUE = preload("res://Assets/Sprites/Presents/presentblue.png")
 const PRESENT_RED = preload("res://Assets/Sprites/Presents/presentred.png")
 const PRESENT_WHITE = preload("res://Assets/Sprites/Presents/presentwhite.png")
 const PUPPET_CYCLE_FRONT = preload("res://Assets/Sprites/Puppet_wakeup_front/Puppet_Cycle_front.tres")
 const PUPPET_CYCLE_SIDE = preload("res://Assets/Sprites/Puppet_wakeup_side/Puppet_Cycle_side.tres")
 
+### Configuration ###
 @export_enum("left", "ground", "right") var pose: String
 @export_range(1, 5) var aggro: int = 1
 
+### State Management ###
 var attack: bool = false
-
-# Internal variable for Stage
-var _stage: int = 0  # Tracks the last puppet that attacked
-
+var _stage: int = 0  # Tracks attack progression stage
 var aggro_lvls: Dictionary = {
-	1: Vector2(20, 30),
+	1: Vector2(20, 30),  # Min/max delay ranges for each aggression level
 	2: Vector2(15, 25),
 	3: Vector2(10, 25),
 	4: Vector2(5, 20),
 	5: Vector2(5, 15)
 }
 
-# Property for Stage
+### Stage Property ###
 var Stage: int:
-	get:
-		return _stage
+	get: return _stage
 	set(value):
-		# Reset to 0 if Stage reaches or exceeds 2
-		if _stage >= 2:
-			_stage = 0
-		else:
-			_stage += value
+		# Cycle through stages 0-2
+		_stage = (_stage + value) % 3  # Improved cycling logic
 
+### Initialization ###
 func _ready() -> void:
-	animated_sprite_2d.connect("animation_finished", _on_animation_finished)
-	SignalBus.connect("puppet_cummed", reset_last_attacker)
+	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
+	SignalBus.puppet_cummed.connect(reset_last_attacker)
+	
+	initialize_puppet()
+
+func initialize_puppet():
 	_set_pose_animation()
 	animated_sprite_2d.animation = str(Stage)
 	_random_delay()
 
+### Animation Setup ###
 func _set_pose_animation() -> void:
 	match pose:
 		"left":
 			animated_sprite_2d.sprite_frames = PUPPET_CYCLE_SIDE
-			scale.x = abs(scale.x) * -1  # Ensure proper mirroring
+			scale.x = -abs(scale.x)  # Mirror sprite
 		"ground":
 			animated_sprite_2d.sprite_frames = PUPPET_CYCLE_FRONT
 		"right":
 			animated_sprite_2d.sprite_frames = PUPPET_CYCLE_SIDE
+			scale.x = abs(scale.x)  # Ensure right-facing
+
+### Attack Timing System ###
+var _rng = RandomNumberGenerator.new()  # Reusable RNG instance
 
 func _random_delay() -> void:
 	if aggro_lvls.has(aggro):
-		var range = aggro_lvls[aggro]
-		var rng = RandomNumberGenerator.new()
-		rng.randomize()
-		var random_delay = rng.randf_range(range.x, range.y)
+		var delay_range = aggro_lvls[aggro]
+		_rng.randomize()
+		var random_delay = _rng.randf_range(delay_range.x, delay_range.y)
 		
-		print(name, " Next stage in ", str(random_delay), " seconds.")
-		
+		print("%s next attack in: %.1fs" % [name, random_delay])
 		await get_tree().create_timer(random_delay).timeout
-		Stage = 1
-		animated_sprite_2d.play(str(Stage))
+		
+		advance_stage()
 	else:
-		print("Invalid aggro level: ", aggro)
+		push_error("Invalid aggro level: %d" % aggro)
 
+func advance_stage():
+	Stage = 1
+	animated_sprite_2d.play(str(Stage))
+
+### Animation Handling ###
 func _on_animation_finished() -> void:
 	if animated_sprite_2d.animation == "2":
-		attack = true
-	if attack:
-		Global.AttackTrack += 1
-		SignalBus.emit_signal("attacking")
-		Global.AttackOrder.push_front(self)
+		trigger_attack()
 	else:
 		_random_delay()
 
-# Reset the last attacker when AttackTrack is decremented
+func trigger_attack():
+	attack = true
+	Global.AttackTrack += 1
+	SignalBus.attacking.emit()
+	Global.AttackOrder.push_front(self)
+
+### Attack Reset System ###
 func reset_last_attacker() -> void:
-	if Global.AttackOrder.size() > 0 and Global.AttackOrder.front() == self:
-		print("Signal received by: ", name)
-		print("Current AttackOrder: ", Global.AttackOrder)
+	if Global.AttackOrder.size() > 0 && Global.AttackOrder.front() == self:
+		print("Resetting attacker: ", name)
 		Stage = 1
 		attack = false
 		animated_sprite_2d.animation = str(Stage)

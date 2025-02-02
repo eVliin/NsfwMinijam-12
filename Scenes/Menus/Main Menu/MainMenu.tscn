@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ggow5ddllgga"]
 
-[ext_resource type="Texture2D" uid="uid://8u5vthp8lu5e" path="res://Assets/PLaceholder/titlemockup.png" id="1_gl3g7"]
+[ext_resource type="Texture2D" uid="uid://8u5vthp8lu5e" path="res://Assets/Placeholder/titlemockup.png" id="1_gl3g7"]
 [ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_hgnt5"]
 [ext_resource type="Theme" uid="uid://cqst728xxipcw" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="3_smrde"]
 [ext_resource type="Script" path="res://Scenes/Menus/button.gd" id="4_4g04n"]

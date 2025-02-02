@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccud813k01rli"
-path.s3tc="res://.godot/imported/lock_albedo.png-6cb3402e312afcadb9329688a15c4218.s3tc.ctex"
-path.etc2="res://.godot/imported/lock_albedo.png-6cb3402e312afcadb9329688a15c4218.etc2.ctex"
+path.s3tc="res://.godot/imported/lock_albedo.png-e1ce344274cb87b581290c0285f04f61.s3tc.ctex"
+path.etc2="res://.godot/imported/lock_albedo.png-e1ce344274cb87b581290c0285f04f61.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/PLaceholder/present/Materials/lock_albedo.png"
-dest_files=["res://.godot/imported/lock_albedo.png-6cb3402e312afcadb9329688a15c4218.s3tc.ctex", "res://.godot/imported/lock_albedo.png-6cb3402e312afcadb9329688a15c4218.etc2.ctex"]
+source_file="res://Assets/Placeholder/present/Materials/lock_albedo.png"
+dest_files=["res://.godot/imported/lock_albedo.png-e1ce344274cb87b581290c0285f04f61.s3tc.ctex", "res://.godot/imported/lock_albedo.png-e1ce344274cb87b581290c0285f04f61.etc2.ctex"]
 
 [params]
 

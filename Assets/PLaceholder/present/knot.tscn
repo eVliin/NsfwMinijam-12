@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://yvsg8inicp6"]
 
-[ext_resource type="PackedScene" uid="uid://y43gwjjbkmvj" path="res://Assets/PLaceholder/present/Knot.glb" id="1_o2hjv"]
+[ext_resource type="PackedScene" uid="uid://y43gwjjbkmvj" path="res://Assets/Placeholder/present/Knot.glb" id="1_o2hjv"]
 
 [node name="Knot" instance=ExtResource("1_o2hjv")]
 

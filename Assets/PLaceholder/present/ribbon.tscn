@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddxi1mjqnilv7"]
 
-[ext_resource type="PackedScene" uid="uid://cnwntxm0mqao8" path="res://Assets/PLaceholder/present/Ribbon.glb" id="1_5vpp1"]
+[ext_resource type="PackedScene" uid="uid://cnwntxm0mqao8" path="res://Assets/Placeholder/present/Ribbon.glb" id="1_5vpp1"]
 
 [node name="Ribbon" instance=ExtResource("1_5vpp1")]
 

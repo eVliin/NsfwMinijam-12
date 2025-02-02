@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Scenes/Minigames/Present/node_3d.gd" id="1_tgx4l"]
 [ext_resource type="PackedScene" uid="uid://b0rpug8oir2ks" path="res://Scenes/Entities/Present/3Dpresent.tscn" id="2_242nx"]
 [ext_resource type="Script" path="res://Scenes/Entities/Present/3Dpresent.gd" id="3_j14yw"]
-[ext_resource type="Material" uid="uid://5q6dqpjkhm6v" path="res://Assets/PLaceholder/present/Materials/Red.tres" id="4_nq5dq"]
-[ext_resource type="Material" uid="uid://sysk0xcl723a" path="res://Assets/PLaceholder/present/Materials/Blue.tres" id="5_r6mpq"]
-[ext_resource type="Material" uid="uid://b5fdh5bjcgslc" path="res://Assets/PLaceholder/present/Materials/White.tres" id="6_08543"]
+[ext_resource type="Material" uid="uid://5q6dqpjkhm6v" path="res://Assets/Placeholder/present/Materials/Red.tres" id="4_nq5dq"]
+[ext_resource type="Material" uid="uid://sysk0xcl723a" path="res://Assets/Placeholder/present/Materials/Blue.tres" id="5_r6mpq"]
+[ext_resource type="Material" uid="uid://b5fdh5bjcgslc" path="res://Assets/Placeholder/present/Materials/White.tres" id="6_08543"]
 
 [node name="Minigame" type="Node3D"]
 script = ExtResource("1_tgx4l")
