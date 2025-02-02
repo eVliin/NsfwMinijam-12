@@ -21,6 +21,6 @@ func get_mouse_world_pos(mouse:Vector2):
 			params.to = end
 			#cast the ray using the space and return the results as a Dictionary
 			var result = space.intersect_ray(params)
-			print(result)
+			#print(result)
 			if result.is_empty():
 				SignalBus.present_close.emit()

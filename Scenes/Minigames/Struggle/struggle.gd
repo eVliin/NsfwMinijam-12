@@ -17,6 +17,7 @@ extends Node2D
 signal free
 
 # Variáveis de estado
+var sceneready = false
 var busy: bool = false  # Indica se o nó está ocupado com uma animação
 var _elbow: bool  # Estado interno do cotovelo (elbow)
 
@@ -26,24 +27,26 @@ func _ready() -> void:
 	SignalBus.attacking.connect(_on_pop)
 	animation_player.animation_started.connect(_on_animation_started)
 	animation_player.animation_finished.connect(_on_animation_finished)
+	sceneready = true
 
 # Função para definir o estado "elbow" (cotovelo)
 func _set_elbow(value: bool) -> void:
-	var current_frame = chris_base.get_frame()
-	var start_time = chris_base.get_frame_progress()  # Salva o progresso atual da animação
-	_elbow = value  # Atualiza o estado interno
-	print("Elbow status:", _elbow)
+	if sceneready == true:
+		var current_frame = chris_base.get_frame()
+		var start_time = chris_base.get_frame_progress()  # Salva o progresso atual da animação
+		_elbow = value  # Atualiza o estado interno
+		print("Elbow status:", _elbow)
 
-	# Atualiza as animações com base no novo estado
-	if _elbow:
-		chris_base.play("elbow")
-	else:
-		chris_base.play("noelbow")
+		# Atualiza as animações com base no novo estado
+		if _elbow:
+			chris_base.play("elbow")
+		else:
+			chris_base.play("noelbow")
 
-	# Sincroniza outras animações
-	frontshot_puppet_hand.play("default")
-	frontshot_puppet_hand.set_frame_and_progress(current_frame, start_time)
-	chris_base.set_frame_and_progress(current_frame, start_time)
+		# Sincroniza outras animações
+		frontshot_puppet_hand.play("default")
+		frontshot_puppet_hand.set_frame_and_progress(current_frame, start_time)
+		chris_base.set_frame_and_progress(current_frame, start_time)
 
 # Manipula o início das animações (atualiza o estado de "busy")
 func _on_animation_started(_animation_name: String) -> void:
@@ -83,7 +86,8 @@ func cummed() -> void:
 		Global.AttackTrack = max(0, Global.AttackTrack - 1)  # Reduz o contador global de ataques
 		SignalBus.emit_signal("puppet_cummed")  # Emite sinal global para informar a conclusão
 		Global.AttackOrder.pop_front()  # Remove a primeira ação da fila
-	else:
+	
+	elif Global.popUpTrack > 0:
 		# Se ocupado, aguarda o nó estar livre e tenta novamente
 		print("Esperando para processar cum...")
 		await free
@@ -92,6 +96,6 @@ func cummed() -> void:
 
 # Responde a eventos de entrada do jogador (cliques ou teclas)
 func _input(event: InputEvent) -> void:
-	if visible and Input.is_action_just_released("ui_accept"):
+	if visible and Input.is_action_just_released("dialogic_default_action"):
 		print("Ativando 'cum'")
 		cummed()

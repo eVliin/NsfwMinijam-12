@@ -5,5 +5,6 @@ func _ready():
 	show()
 
 func _on_close():
-	hide()
-	SignalBus.pop_close.emit()
+	if visible:
+		hide()
+		SignalBus.minigame_hide.emit()

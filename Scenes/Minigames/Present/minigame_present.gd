@@ -1,6 +1,6 @@
 extends SubViewportContainer
 
-@onready var presents: Node = get_parent().get_parent().get_parent().get_node('Presents')
+@onready var presents: Node = get_parent().get_parent().get_parent().get_parent().get_node('Presents')
 @onready var present: StaticBody3D = $SubViewport/Minigame/Present
 
 signal color_set
@@ -13,7 +13,7 @@ func _ready() -> void:
 	hide()
 	present.color = presents.get_child(name.to_int()).color
 	color_set.emit()
-	$SubViewport.handle_input_locally = true
+	#$SubViewport.handle_input_locally = true
 	SignalBus.define_puzzles.connect(_define_puzzles)
 	SignalBus.present_open.connect(_opened)
 	SignalBus.present_close.connect(_closed)
@@ -31,6 +31,12 @@ func _define_puzzles(_name, puzzles):
 		present.puzzles = puzzles
 		present._define()
 		defined = true
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		Global.mouse = event.position
+	elif event is InputEventMouseButton and Input.is_action_just_pressed("Select"):
+		SignalBus.get_mouse_world_pos.emit(Global.mouse)
 
 func _closed():
 	if _id == name.to_int():
