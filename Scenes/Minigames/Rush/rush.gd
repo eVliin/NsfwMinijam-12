@@ -113,5 +113,5 @@ func _input(event: InputEvent) -> void:
 		SignalBus.minigame_hide.emit()
 
 func _on_bounds_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_action_just_released("Select"):
+	if Input.is_action_just_pressed("Select"):
 		close.emit()

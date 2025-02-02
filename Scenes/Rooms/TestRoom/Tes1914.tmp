@@ -166,19 +166,6 @@ text = "Agrro level: 1
 press up or down to change it (yes you are helping me debug this)"
 horizontal_alignment = 2
 
-[node name="presents" type="Control" parent="Camera2D/MinigameLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 1
-
-[node name="minigames" type="Control" parent="Camera2D/MinigameLayer"]
+[node name="minigames" type="Node2D" parent="Camera2D/MinigameLayer"]
 z_index = 4
-layout_mode = 3
-anchors_preset = 0
-offset_left = 320.0
-offset_top = 180.0
-offset_right = 320.0
-offset_bottom = 180.0
-mouse_filter = 1
+position = Vector2(320, 180)

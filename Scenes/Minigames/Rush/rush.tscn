@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://xvhfq62isowe" path="res://Scenes/Minigames/Rush/rushbg.png" id="2_cu7j3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k4rr"]
-size = Vector2(377.571, 652.857)
+size = Vector2(807.072, 1907)
 
 [node name="Rush" type="Node2D"]
 script = ExtResource("1_ipb5t")
@@ -23,17 +23,16 @@ collision_layer = 16384
 collision_mask = 16384
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bounds"]
-position = Vector2(-339.786, 26.4285)
-scale = Vector2(1, 1)
+position = Vector2(-554.786, -2.50006)
 shape = SubResource("RectangleShape2D_7k4rr")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="bounds"]
-position = Vector2(0, 339.714)
+position = Vector2(0, 551.714)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7k4rr")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="bounds"]
-position = Vector2(0, -339.714)
+position = Vector2(0, -552.714)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7k4rr")
 
@@ -42,7 +41,7 @@ collision_layer = 49152
 collision_mask = 16384
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="boundv"]
-position = Vector2(343.714, 0)
+position = Vector2(558.464, -3.21425)
 shape = SubResource("RectangleShape2D_7k4rr")
 
 [connection signal="input_event" from="bounds" to="." method="_on_bounds_input_event"]
