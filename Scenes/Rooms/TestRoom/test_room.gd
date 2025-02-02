@@ -1,10 +1,11 @@
 extends Node2D
 
-@export var debug_label_text: String = "Aggro level: {0}, press up or down to change it (yes you are helping me debug this)"
+@export var debug_label_text: String = "Aggro level: {0},
+press up or down to change it (yes you are helping me debug this)"
 @export var point: int:
 	set(value):
 		_point = value
-		$Camera2D/MinigameLayer/Label.text = debug_label_text.format(value)
+		$Camera2D/MinigameLayer/Label.text = debug_label_text.format([value])
 
 const MINIGAME_PRESENT = preload("res://Scenes/Minigames/Present/MinigamePresent.tscn")
 const RUSH = preload("res://Scenes/Minigames/Rush/rushminigame.tscn")
