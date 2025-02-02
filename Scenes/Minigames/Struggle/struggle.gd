@@ -99,7 +99,7 @@ func execute_cummed_actions():
 #region Input Handling
 func _input(event: InputEvent) -> void:
 	"""Handle player input for attack resolution"""
-	if visible and Input.is_action_just_released("dialogic_default_action"):
+	if visible and Input.is_action_just_pressed("dialogic_default_action"):
 		print("Triggering attack resolution")
 		cummed()
 #endregion
