@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://bmtq7ulrcy2hk"]
 
-[ext_resource type="Material" uid="uid://d38dig07xuw0l" path="res://Assets/PLaceholder/present/Materials/lock.tres" id="1_lw0m1"]
+[ext_resource type="Material" uid="uid://d38dig07xuw0l" path="res://Assets/Placeholder/present/Materials/lock.tres" id="1_lw0m1"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_revnh"]
 _surfaces = [{

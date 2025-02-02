@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cacjookwtyr3k"
-path.s3tc="res://.godot/imported/picross_albedo.png-6d3a16e153ebbc3294b05eae4a2268a2.s3tc.ctex"
-path.etc2="res://.godot/imported/picross_albedo.png-6d3a16e153ebbc3294b05eae4a2268a2.etc2.ctex"
+path.s3tc="res://.godot/imported/picross_albedo.png-62fb28a7536cd963a41b33c51c16d6ea.s3tc.ctex"
+path.etc2="res://.godot/imported/picross_albedo.png-62fb28a7536cd963a41b33c51c16d6ea.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/PLaceholder/present/Materials/picross_albedo.png"
-dest_files=["res://.godot/imported/picross_albedo.png-6d3a16e153ebbc3294b05eae4a2268a2.s3tc.ctex", "res://.godot/imported/picross_albedo.png-6d3a16e153ebbc3294b05eae4a2268a2.etc2.ctex"]
+source_file="res://Assets/Placeholder/present/Materials/picross_albedo.png"
+dest_files=["res://.godot/imported/picross_albedo.png-62fb28a7536cd963a41b33c51c16d6ea.s3tc.ctex", "res://.godot/imported/picross_albedo.png-62fb28a7536cd963a41b33c51c16d6ea.etc2.ctex"]
 
 [params]
 

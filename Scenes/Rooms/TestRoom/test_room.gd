@@ -1,52 +1,66 @@
+# Main game manager handling minigames, puppets, UI, and debug controls
 extends Node2D
 
-@export var debug_label_text: String = "Aggro level: {0},
-press up or down to change it (yes you are helping me debug this)"
+## Debug label showing current aggro level. {0} will be replaced with aggro value
+@export var debug_label_text: String = "Aggro level: {0},\npress up or down to change it (yes you are helping me debug this)"
+
+## Current aggro point value with setter for label updates
 @export var point: int:
 	set(value):
 		_point = value
+		# Update debug label text when value changes
 		$Camera2D/MinigameLayer/Label.text = debug_label_text.format([value])
 
+# Minigame scene constants
 const MINIGAME_PRESENT = preload("res://Scenes/Minigames/Present/MinigamePresent.tscn")
 const RUSH = preload("res://Scenes/Minigames/Rush/rushminigame.tscn")
 
+# Node references
 @onready var presents_node: Node = $Presents
-@onready var camera_node: Node = $"Camera2D/Fnaf ass camera"
+@onready var camera_node: Node = $"Camera2D/Fnaf ass camera"  # TODO: Rename to more descriptive name
 @onready var presents: Control = $Camera2D/MinigameLayer/presents
 @onready var minigames_node: Node = $Camera2D/MinigameLayer/minigames
 
-var _point: int = 0
+var _point: int = 0  # Backing field for point property
 
 func _ready() -> void:
+	# Signal connections for game events
 	SignalBus.pop_open.connect(_pop_up)
 	SignalBus.minigame_show.connect(_minigame)
 	SignalBus.minigame_hide.connect(_minigame_close)
 	SignalBus.pop_close.connect(_pop_close)
 	SignalBus.attacking.connect(_pop_up)
-	SignalBus.puppet_cummed.connect(_pop_close)
+	SignalBus.puppet_cummed.connect(_pop_close)  # TODO: Consider renaming signal to something more professional
 	
+	# Initialize global game state
 	Global.AttackTrack = 0
-	Dialogic.start('TestDialogue')
 	Global.popUpTrack = 0
 	
+	# Start dialogue system
+	Dialogic.start('TestDialogue')
+	
+	# Create present minigame instances
 	for i in presents_node.get_child_count():
 		var instance = MINIGAME_PRESENT.instantiate()
 		instance.name = str(i)
 		presents.add_child(instance)
 
+## Handles showing minigames based on type
 func _minigame(id, type):
-	print(id, " ", type)
+	print("Opening minigame: ", id, " ", type)
 	presents.process_mode = Node.PROCESS_MODE_DISABLED
 	
+	# Determine which minigame scene to load
 	var target_scene = RUSH if type == "rush" else null
 	
 	if not target_scene:
-		push_error("Tipo de minigame inválido: ", type)
+		push_error("Invalid minigame type: ", type)
 		return
 	
 	var existing_node = minigames_node.get_node_or_null(str(id))
-	_pop_up()
+	_pop_up()  # Show pop-up overlay
 	
+	# Reuse existing instance or create new one
 	if existing_node:
 		existing_node.visible = true
 	else:
@@ -55,31 +69,36 @@ func _minigame(id, type):
 		minigames_node.add_child(new_instance)
 		new_instance.visible = true
 
+## Handles closing minigames and restoring UI
 func _minigame_close():
 	_pop_close()
 	update_presents_processing()
 
+## Updates present button availability based on active minigames
 func update_presents_processing():
 	var all_hidden = true
-	print("ass")
 	for child in minigames_node.get_children():
 		if child.visible:
 			all_hidden = false
 			break
+	
+	# TODO: Fix this assignment - currently does nothing (bug)
 	if all_hidden:
 		presents.process_mode = Node.PROCESS_MODE_INHERIT
-		print("anus")
 	else:
-		Node.PROCESS_MODE_DISABLED
+		presents.process_mode = Node.PROCESS_MODE_DISABLED
 
+## Track pop-up overlay state
 func _pop_up():
 	Global.popUpTrack += 1
-	print("pop track: ",Global.popUpTrack)
+	print("Pop-up count: ", Global.popUpTrack)
+
 func _pop_close():
-	Global.popUpTrack -= 1
-	print("pop track: ",Global.popUpTrack)
+	Global.popUpTrack = max(0, Global.popUpTrack - 1)
+	print("Pop-up count: ", Global.popUpTrack)
 
 func _process(delta: float) -> void:
+	# Handle UI visibility based on pop-up state
 	if Global.popUpTrack <= 0:
 		presents_node.process_mode = Node.PROCESS_MODE_INHERIT
 		camera_node.process_mode = Node.PROCESS_MODE_INHERIT
@@ -88,14 +107,16 @@ func _process(delta: float) -> void:
 		presents_node.process_mode = Node.PROCESS_MODE_DISABLED
 		camera_node.process_mode = Node.PROCESS_MODE_DISABLED
 	
+	# Debug controls for aggro system
 	if Input.is_action_just_pressed("ui_up") && $"Puppets/0".aggro < 5:
-		$"Puppets/0".aggro += 1
-		$"Puppets/1".aggro += 1
-		$"Puppets/2".aggro += 1
-		point = $"Puppets/0".aggro
+		adjust_aggro(1)
 	
 	if Input.is_action_just_pressed("ui_down") && $"Puppets/0".aggro > 1:
-		$"Puppets/0".aggro -= 1
-		$"Puppets/1".aggro -= 1
-		$"Puppets/2".aggro -= 1
-		point = $"Puppets/0".aggro
+		adjust_aggro(-1)
+
+## Adjust aggro for all puppets and update debug display
+func adjust_aggro(amount: int):
+	for i in 3:  # Hardcoded puppet count - consider dynamic lookup
+		var puppet = get_node("Puppets/%s" % i)
+		puppet.aggro = clamp(puppet.aggro + amount, 1, 5)
+	point = $"Puppets/0".aggro

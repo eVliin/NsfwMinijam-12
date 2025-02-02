@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bu71mxbqkurtb"
-path="res://.godot/imported/Lock_.glb-ed8bc15734291c73feda3f6c6bec4b7e.scn"
+path="res://.godot/imported/Lock_.glb-c58fa261126c3585dd8cdf4620b448c5.scn"
 
 [deps]
 
-source_file="res://Assets/PLaceholder/present/Lock_.glb"
-dest_files=["res://.godot/imported/Lock_.glb-ed8bc15734291c73feda3f6c6bec4b7e.scn"]
+source_file="res://Assets/Placeholder/present/Lock_.glb"
+dest_files=["res://.godot/imported/Lock_.glb-c58fa261126c3585dd8cdf4620b448c5.scn"]
 
 [params]
 

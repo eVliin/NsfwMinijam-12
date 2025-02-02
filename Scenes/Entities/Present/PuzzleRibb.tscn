@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://c46rsgv258oad"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/Present/puzzle_ribb.gd" id="1_1sqhq"]
-[ext_resource type="PackedScene" uid="uid://yvsg8inicp6" path="res://Assets/PLaceholder/present/knot.tscn" id="2_kuloq"]
-[ext_resource type="PackedScene" uid="uid://byynyra6i8w1e" path="res://Assets/PLaceholder/present/pull.tscn" id="3_jawny"]
-[ext_resource type="PackedScene" uid="uid://cxpesy6bfx0bi" path="res://Assets/PLaceholder/present/pull_l.tscn" id="4_hqwvj"]
-[ext_resource type="PackedScene" uid="uid://ddxi1mjqnilv7" path="res://Assets/PLaceholder/present/ribbon.tscn" id="5_2hujo"]
-[ext_resource type="PackedScene" uid="uid://bi6apvs1q888d" path="res://Assets/PLaceholder/present/ribbon_l.tscn" id="6_y56mu"]
+[ext_resource type="PackedScene" uid="uid://yvsg8inicp6" path="res://Assets/Placeholder/present/knot.tscn" id="2_kuloq"]
+[ext_resource type="PackedScene" uid="uid://byynyra6i8w1e" path="res://Assets/Placeholder/present/pull.tscn" id="3_jawny"]
+[ext_resource type="PackedScene" uid="uid://cxpesy6bfx0bi" path="res://Assets/Placeholder/present/pull_l.tscn" id="4_hqwvj"]
+[ext_resource type="PackedScene" uid="uid://ddxi1mjqnilv7" path="res://Assets/Placeholder/present/ribbon.tscn" id="5_2hujo"]
+[ext_resource type="PackedScene" uid="uid://bi6apvs1q888d" path="res://Assets/Placeholder/present/ribbon_l.tscn" id="6_y56mu"]
 [ext_resource type="PackedScene" uid="uid://bmtq7ulrcy2hk" path="res://Assets/Models/lock.tscn" id="7_bdqdv"]
 [ext_resource type="PackedScene" uid="uid://dblo0twk321hc" path="res://Assets/Models/lock_.tscn" id="8_coo0y"]
 

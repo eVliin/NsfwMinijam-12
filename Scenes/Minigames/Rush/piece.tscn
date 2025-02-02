@@ -80,7 +80,6 @@ collision_mask = 16384
 hit_from_inside = true
 collide_with_areas = true
 
-[connection signal="input_event" from="Node2D/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Node2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="area_entered" from="Node2D/vicheck" to="." method="_on_vicheck_area_entered"]
