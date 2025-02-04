@@ -14,6 +14,7 @@ extends Node2D
 # Minigame scene constants
 const MINIGAME_PRESENT = preload("res://Scenes/Minigames/Present/MinigamePresent.tscn")
 const RUSH = preload("res://Scenes/Minigames/Rush/rushminigame.tscn")
+const TILES = preload("res://Scenes/Minigames/Tiles/tilesminigame.tscn")
 
 # Node references
 @onready var presents_node: Node = $Presents
@@ -51,7 +52,13 @@ func _minigame(id, type):
 	presents.process_mode = Node.PROCESS_MODE_DISABLED
 	
 	# Determine which minigame scene to load
-	var target_scene = RUSH if type == "rush" else null
+	var target_scene = type
+	
+	match target_scene:
+		"rush":
+			target_scene = RUSH
+		"tiles":
+			target_scene = TILES
 	
 	if not target_scene:
 		push_error("Invalid minigame type: ", type)

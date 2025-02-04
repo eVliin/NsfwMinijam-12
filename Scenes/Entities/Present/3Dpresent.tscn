@@ -16,7 +16,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, -0.006)
 
 [node name="PuzzleRibb" parent="." instance=ExtResource("3_jkukm")]
 transform = Transform3D(1, 0, 0, 0, 0.997061, -0.0766146, 0, 0.0766146, 0.997061, 0, 0, 0.162371)
-type = "rush"
 
 [node name="PuzzleRibb2" parent="." instance=ExtResource("3_jkukm")]
 transform = Transform3D(-4.36262e-08, 0.100657, 0.994921, 2.72715e-09, 0.994921, -0.100657, -1, -1.67798e-09, -4.36792e-08, 0.161, 0, 0)

@@ -1,8 +1,7 @@
 [music fade="1.0" volume="0.0"]
-[background fade="0.0"]
-join Chris center
 Chris: Hey uhhhh
-We didnt finished the game yet, BUT, we might get a actual demo? so yeah, if you like the idea of this project and want to actually play a level... come back?
-im dropping little tests every now and then sooo...
-Please?
+Chris: We didnt finished the game yet, BUT, we might get a actual demo? so yeah, if you like the idea of this project and want to actually play a level... come back?
+Mary: we r dropping little tests every now and then sooo...
+Mary: Please?
+Chris: \:3
 set {Global.player_has_control} = true

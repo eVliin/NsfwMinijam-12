@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmg3d6l4bixrm"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Tiles/tiles.gd" id="1_uoaf7"]
+[ext_resource type="Texture2D" uid="uid://cee06l00f3q4c" path="res://Scenes/Minigames/Tiles/tilesbg.png" id="2_clq1f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_siaji"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j04gc"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2rpw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2vaap"]
+normal = Vector2(1, 0)
+
+[node name="Tiles" type="Node2D"]
+script = ExtResource("1_uoaf7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("2_clq1f")
+
+[node name="pieces" type="Node2D" parent="."]
+position = Vector2(-186, -186)
+scale = Vector2(0.94, 0.94)
+
+[node name="bounds" type="Area2D" parent="."]
+collision_layer = 16384
+collision_mask = 16384
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bounds"]
+position = Vector2(-157, -2.50006)
+shape = SubResource("WorldBoundaryShape2D_siaji")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bounds"]
+position = Vector2(0, 157)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_j04gc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="bounds"]
+position = Vector2(159, -3.21425)
+shape = SubResource("WorldBoundaryShape2D_e2rpw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="bounds"]
+position = Vector2(0, -159)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_2vaap")
+
+[connection signal="input_event" from="bounds" to="." method="_on_bounds_input_event"]

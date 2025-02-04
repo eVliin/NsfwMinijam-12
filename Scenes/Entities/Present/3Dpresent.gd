@@ -38,7 +38,7 @@ func _define():
 		var target = target_nodes[i]
 		target.visible = true
 		target.type = active_puzzles[i]  # Requires 'type' property on target nodes
-		target._configure_puzzle_visual()            # Requires '_match' method on target nodes
+		target._configure_puzzle_visual()            # Requires '_configure_puzzle_visual' method on target nodes
 	
 	# Hide unused targets
 	for i in range(max_puzzles, target_nodes.size()):

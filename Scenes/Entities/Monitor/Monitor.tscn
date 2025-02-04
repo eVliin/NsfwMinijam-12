@@ -1,10 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://dms0yb8uplpdw"]
+[gd_scene load_steps=9 format=3 uid="uid://dms0yb8uplpdw"]
 
 [ext_resource type="Texture2D" uid="uid://dvn4mabrwopbh" path="res://Assets/UI/tv.png" id="1_4dsbv"]
+[ext_resource type="Script" path="res://Scenes/Entities/Monitor/monitor.gd" id="1_pxu7l"]
+[ext_resource type="PackedScene" uid="uid://lqeool02o7dd" path="res://Assets/Characters/Mary/layered_portrait_mary.tscn" id="2_ewf25"]
+[ext_resource type="FontFile" uid="uid://dw5w0tw3iugw0" path="res://Assets/UI/Fonts/LTStopwatch-Regular.ttf" id="2_n8mrf"]
+
+[sub_resource type="Gradient" id="Gradient_qdw41"]
+colors = PackedColorArray(0, 0, 0, 1, 0.351563, 0.351563, 0.351563, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8g8gd"]
+gradient = SubResource("Gradient_qdw41")
+width = 140
+
+[sub_resource type="LabelSettings" id="LabelSettings_5y50r"]
+font = ExtResource("2_n8mrf")
+font_size = 32
+shadow_size = 5
+shadow_color = Color(0.3712, 0.64, 0.38464, 0.678431)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gri1y"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Monitor" type="Node2D"]
+script = ExtResource("1_pxu7l")
+
+[node name="Screen2" type="Sprite2D" parent="."]
+position = Vector2(-70, -50)
+scale = Vector2(1, 100)
+texture = SubResource("GradientTexture1D_8g8gd")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -8.5
+offset_right = 26.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00254, 1)
+size_flags_horizontal = 4
+text = "TIME00"
+label_settings = SubResource("LabelSettings_5y50r")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Screen" type="Sprite2D" parent="."]
+texture = SubResource("ViewportTexture_gri1y")
 
 [node name="Frame" type="Sprite2D" parent="."]
 texture = ExtResource("1_4dsbv")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(140, 100)
+
+[node name="LayeredPortrait" parent="SubViewport" instance=ExtResource("2_ewf25")]
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
