@@ -28,6 +28,8 @@ overrides = {}
 script = ExtResource("2_tlhae")
 scene = ExtResource("5_ejxld")
 overrides = {
+"box_color_custom": "Color(0, 0, 0, 0.392157)",
+"box_color_use_global": "false",
 "box_margin_bottom": "0.0",
 "box_size": "Vector2(550, 100)",
 "name_label_alignment": "2",
@@ -71,4 +73,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_tlhae")]([])
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "13"

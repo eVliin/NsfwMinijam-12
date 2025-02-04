@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://1mlh20h3ly7f"]
+[gd_scene load_steps=3 format=3 uid="uid://1mlh20h3ly7f"]
 
+[ext_resource type="Script" path="res://Scenes/HUD/hud.gd" id="1_jhcc6"]
 [ext_resource type="PackedScene" uid="uid://7w7etgq3aysk" path="res://Assets/Characters/Chris/layered_portrait_chris.tscn" id="1_ywmwq"]
 
 [node name="Hud" type="Control"]
@@ -12,7 +13,18 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
+script = ExtResource("1_jhcc6")
 metadata/_edit_use_anchors_ = true
 
 [node name="LayeredPortrait" parent="." instance=ExtResource("1_ywmwq")]
 position = Vector2(69, 277)
+
+[node name="pauseHud" type="Button" parent="."]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 10.0
+offset_right = 628.0
+offset_bottom = 35.0
+text = "| |"
+
+[connection signal="pressed" from="pauseHud" to="." method="_on_pause_hud_pressed"]

@@ -95,9 +95,9 @@ animation = &"talk"
 frame_progress = 0.725143
 
 [node name="BlinkTimer" type="Timer" parent="Group1"]
-wait_time = 4.57742
+wait_time = 2.66983
 one_shot = true
 
 [node name="LookTimer" type="Timer" parent="Group1"]
-wait_time = 4.02059
+wait_time = 19.0255
 one_shot = true

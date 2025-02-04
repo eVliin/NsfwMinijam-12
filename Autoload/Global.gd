@@ -27,6 +27,17 @@ var AttackOrder: Array
 ## Drag-and-drop state flag
 var is_dragging: bool = false
 
+
+## Pause state with automatic process mode handling
+var game_paused : bool = false:
+	get: return game_paused
+	set(value):
+		if game_paused == value: return
+		game_paused = value
+		# Update process mode using enum values for clarity
+		SignalBus.pause.emit(game_paused)
+
+
 ### ID Generation System ###
 var _id_counter: int = 0  # Backing field for puzzleid
 

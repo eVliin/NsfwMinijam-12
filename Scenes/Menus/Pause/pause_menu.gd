@@ -35,7 +35,7 @@ func _show(is_paused: bool) -> void:
 ### Button Handlers ###
 func _on_resume_pressed() -> void:
 	"""Resume game gameplay"""
-	main.game_paused = false
+	Global.game_paused = false
 
 func _on_options_pressed() -> void:
 	"""TODO: Implement options menu"""

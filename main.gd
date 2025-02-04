@@ -12,27 +12,21 @@ signal transitioned_out()
 var current_2d_scene  ## Currently loaded game world scene
 var current_gui_scene  ## Currently active GUI scene
 
-## Pause state with automatic process mode handling
-var game_paused : bool = false:
-	get: return game_paused
-	set(value):
-		if game_paused == value: return
-		game_paused = value
-		# Update process mode using enum values for clarity
-		$Node2D.process_mode = Node.PROCESS_MODE_DISABLED if value else Node.PROCESS_MODE_INHERIT
-		SignalBus.pause.emit(game_paused)
-
 const MOUSESELECT = preload("res://Assets/UI/mouseselect.png")  ## Custom cursor texture
 
 func _ready() -> void:
 	Global.game_controller = self  # Register with global access
+	SignalBus.pause.connect(_pause)
 	current_gui_scene = $GUI/SplashScreenManager  # Initial GUI scene
 	Input.set_custom_mouse_cursor(MOUSESELECT, Input.CURSOR_POINTING_HAND)
 
 func _input(event: InputEvent) -> void:
 	# Handle pause input only when player has control
 	if event.is_action_pressed("ui_cancel") && Global.player_has_control:
-		game_paused = !game_paused
+		Global.game_paused = !Global.game_paused
+
+func _pause(value):
+	$Node2D.process_mode = Node.PROCESS_MODE_DISABLED if value else Node.PROCESS_MODE_INHERIT
 
 ## Changes the current GUI scene with optional transition effects
 ## @param new_scene: Path to new scene resource
