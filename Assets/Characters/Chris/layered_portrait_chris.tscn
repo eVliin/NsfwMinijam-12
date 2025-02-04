@@ -1,0 +1,103 @@
+[gd_scene load_steps=16 format=3 uid="uid://7w7etgq3aysk"]
+
+[ext_resource type="Script" path="res://Assets/Characters/Chris/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://v0ul8feh5st8" path="res://Assets/Characters/Chris/portraitbase.png" id="2_uc14f"]
+[ext_resource type="Texture2D" uid="uid://4u1r4cvnvh35" path="res://Assets/Characters/Chris/portraitbottom.png" id="3_u4i34"]
+[ext_resource type="Texture2D" uid="uid://b76nu7f1li058" path="res://Assets/Characters/Chris/portraittop.png" id="4_hm0my"]
+[ext_resource type="Texture2D" uid="uid://bp407nlm5bdpm" path="res://Assets/Characters/Chris/Face/chrisface_0001.png" id="5_lwu61"]
+[ext_resource type="Texture2D" uid="uid://doao50uokmf2n" path="res://Assets/Characters/Chris/Face/chrisblink_0001.png" id="5_v2a2n"]
+[ext_resource type="Texture2D" uid="uid://c40yy70tlm71b" path="res://Assets/Characters/Chris/Face/chrisblink_0002.png" id="6_olfw3"]
+[ext_resource type="Texture2D" uid="uid://cy4xtgqbu06e0" path="res://Assets/Characters/Chris/Face/chrisface_0002.png" id="6_qlan1"]
+[ext_resource type="Texture2D" uid="uid://c8t55tfeeo4ck" path="res://Assets/Characters/Chris/Face/chrisface_0003.png" id="7_pn6r4"]
+[ext_resource type="Texture2D" uid="uid://w6irfshiiov8" path="res://Assets/Characters/Chris/Face/chrisblink_0004.png" id="7_sk46k"]
+[ext_resource type="Texture2D" uid="uid://citr722130b73" path="res://Assets/Characters/Chris/Face/christalk_0001.png" id="11_68ix1"]
+[ext_resource type="Texture2D" uid="uid://qsrgsy0fau5q" path="res://Assets/Characters/Chris/Face/christalk_0002.png" id="12_q1gwm"]
+[ext_resource type="Texture2D" uid="uid://owmje5mj1mb1" path="res://Assets/Characters/Chris/Face/christalk_0003.png" id="13_jwipm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1w6yx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_v2a2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_olfw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sk46k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_olfw3")
+}],
+"loop": false,
+"name": &"blink",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lwu61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qlan1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pn6r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qlan1")
+}],
+"loop": false,
+"name": &"look",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1smg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_68ix1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q1gwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwipm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q1gwm")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 10.0
+}]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_uubi5")
+
+[node name="Layer1" type="Sprite2D" parent="."]
+texture = ExtResource("2_uc14f")
+
+[node name="Group1" type="Node2D" parent="."]
+
+[node name="BottomRibbon" type="Sprite2D" parent="Group1"]
+texture = ExtResource("3_u4i34")
+
+[node name="TopRibbon" type="Sprite2D" parent="Group1"]
+texture = ExtResource("4_hm0my")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="Group1"]
+sprite_frames = SubResource("SpriteFrames_1w6yx")
+animation = &"look"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="Group1"]
+sprite_frames = SubResource("SpriteFrames_q1smg")
+animation = &"talk"
+frame_progress = 0.725143
+
+[node name="BlinkTimer" type="Timer" parent="Group1"]
+wait_time = 4.57742
+one_shot = true
+
+[node name="LookTimer" type="Timer" parent="Group1"]
+wait_time = 4.02059
+one_shot = true

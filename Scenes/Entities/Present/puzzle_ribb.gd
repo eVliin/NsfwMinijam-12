@@ -8,10 +8,10 @@ const MATERIALS = {
 	"lock": preload("res://Assets/Placeholder/present/Materials/lock.tres"),
 	"picross": preload("res://Assets/Placeholder/present/Materials/picross.tres"),
 	"rush": preload("res://Assets/Placeholder/present/Materials/rush.tres"),
-	"slide": preload("res://Assets/Placeholder/present/Materials/slide.tres")
+	"tiles": preload("res://Assets/Placeholder/present/Materials/tiles.tres")
 }
 
-@export var type: String = "lock"  # (enum: lock, picross, rush, slide)
+@export var type: String = "lock"  # (enum: lock, picross, rush, tiles)
 
 ### Runtime Properties ###
 var id: int = -1  # Unique puzzle instance ID

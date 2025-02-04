@@ -9,7 +9,7 @@ extends Node2D
 	"lock": true,    # Lockpicking minigame
 	"picross": false, # Grid-based puzzle
 	"rush": true,    # Rush Hour-style puzzle
-	"slide": false   # Sliding tile puzzle
+	"tiles": false   # Sliding tile puzzle
 }
 
 # Present texture constants

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh63ea0xiupeq"]
+
+[ext_resource type="Script" path="res://Scenes/Minigames/Tiles/tile.gd" id="1_676km"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cr3r8"]
+size = Vector2(100, 100)
+
+[node name="Tile" type="Area2D" groups=["piece"]]
+position = Vector2(50, -49)
+script = ExtResource("1_676km")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_cr3r8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.79, 0.79, 1)
+position = Vector2(-1, -2)
+rotation = 0.0174533
+scale = Vector2(1.03, 1.02)
+centered = false

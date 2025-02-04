@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3yaxapaw403"]
+[gd_scene load_steps=12 format=3 uid="uid://d3yaxapaw403"]
 
 [ext_resource type="Script" path="res://Scenes/Rooms/TestRoom/test_room.gd" id="1_t37ik"]
 [ext_resource type="Texture2D" uid="uid://cj7prpwqs8046" path="res://Assets/BG/room1.png" id="2_v4naw"]
 [ext_resource type="Script" path="res://Scenes/Rooms/TestRoom/camera_pan.gd" id="3_6m7i6"]
+[ext_resource type="PackedScene" uid="uid://dms0yb8uplpdw" path="res://Scenes/Entities/Monitor/Monitor.tscn" id="3_ae3d8"]
 [ext_resource type="PackedScene" uid="uid://b3ledxljed3rx" path="res://Scenes/Entities/Puppet/Puppet.tscn" id="3_bn0fl"]
 [ext_resource type="PackedScene" uid="uid://dh0cmr7025dom" path="res://Scenes/Entities/Present/present.tscn" id="3_ppwu8"]
 [ext_resource type="Script" path="res://Scenes/Rooms/TestRoom/camera_2d.gd" id="5_21bwq"]
@@ -27,6 +28,11 @@ offset_bottom = 360.0
 size_flags_horizontal = 2
 size_flags_vertical = 3
 texture = ExtResource("2_v4naw")
+
+[node name="Monitor" parent="." instance=ExtResource("3_ae3d8")]
+position = Vector2(108, 148)
+scale = Vector2(0.78, 0.78)
+timer = 480
 
 [node name="Puppets" type="Node2D" parent="."]
 
@@ -56,7 +62,7 @@ puzzles = {
 "lock": true,
 "picross": true,
 "rush": true,
-"slide": true
+"tiles": true
 }
 
 [node name="1" parent="Presents" instance=ExtResource("3_ppwu8")]
@@ -64,6 +70,12 @@ position = Vector2(195, 267)
 rotation = -0.0864337
 scale = Vector2(-0.772, 0.722)
 color = "blue"
+puzzles = {
+"lock": true,
+"picross": false,
+"rush": true,
+"tiles": true
+}
 
 [node name="2" parent="Presents" instance=ExtResource("3_ppwu8")]
 z_index = 3
@@ -71,12 +83,6 @@ position = Vector2(688, 300)
 rotation = 0.124112
 scale = Vector2(0.829424, 0.829424)
 color = "white"
-puzzles = {
-"lock": true,
-"picross": false,
-"rush": false,
-"slide": false
-}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
