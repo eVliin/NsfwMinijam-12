@@ -22,7 +22,9 @@ const TILES = preload("res://Scenes/Minigames/Tiles/tilesminigame.tscn")
 @onready var presents: Control = $Camera2D/MinigameLayer/presents
 @onready var minigames_node: Node = $Camera2D/MinigameLayer/minigames
 
+
 var _point: int = 0  # Backing field for point property
+var on := true
 
 func _ready() -> void:
 	# Signal connections for game events
@@ -32,6 +34,8 @@ func _ready() -> void:
 	SignalBus.pop_close.connect(_pop_close)
 	SignalBus.attacking.connect(_pop_up)
 	SignalBus.puppet_cummed.connect(_pop_close)  # TODO: Consider renaming signal to something more professional
+	Dialogic.timeline_started.connect(_label)
+	Dialogic.timeline_ended.connect(_label)
 	
 	# Initialize global game state
 	Global.AttackTrack = 0
@@ -45,6 +49,15 @@ func _ready() -> void:
 		var instance = MINIGAME_PRESENT.instantiate()
 		instance.name = str(i)
 		presents.add_child(instance)
+
+func _label():
+	on = !on
+	if on:
+		$Camera2D/MinigameLayer/Label2.show()
+		$Camera2D/MinigameLayer/Label.show()
+	else:
+		$Camera2D/MinigameLayer/Label2.hide()
+		$Camera2D/MinigameLayer/Label.hide()
 
 ## Handles showing minigames based on type
 func _minigame(id, type):

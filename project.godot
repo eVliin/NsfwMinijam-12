@@ -79,6 +79,12 @@ history/save_on_save=true
 save/autosave=true
 history/simple_history_enabled=true
 history/simple_history_save=true
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
 
 [display]
 

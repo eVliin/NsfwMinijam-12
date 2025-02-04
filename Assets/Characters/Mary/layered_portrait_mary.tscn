@@ -119,27 +119,38 @@ position = Vector2(20.535, 0)
 scale = Vector2(0.697, 0.697)
 
 [node name="Layer1" type="Sprite2D" parent="Group1"]
+position = Vector2(-30.1291, 0)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("2_qjgjs")
 centered = false
 
 [node name="Layer3" type="Sprite2D" parent="Group1"]
+position = Vector2(-30.1291, 0)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("3_ub8ca")
 centered = false
 
 [node name="Layer2" type="Sprite2D" parent="Group1"]
+position = Vector2(-30.1291, 0)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("3_dn7wu")
 centered = false
 
 [node name="Mouth" type="AnimatedSprite2D" parent="Group1"]
-scale = Vector2(1, 1)
+position = Vector2(-30.1291, 0)
+scale = Vector2(1.6, 1.6)
 sprite_frames = SubResource("SpriteFrames_wlxrh")
 animation = &"talk"
 frame_progress = 0.309499
 centered = false
 
 [node name="Eyes" type="AnimatedSprite2D" parent="Group1"]
+position = Vector2(-30.1291, 0)
+scale = Vector2(1.6, 1.6)
 sprite_frames = SubResource("SpriteFrames_rgorg")
 animation = &"blink"
+frame = 4
+frame_progress = 1.0
 centered = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Group1"]
@@ -152,7 +163,7 @@ frame_progress = 1.0
 centered = false
 
 [node name="BlinkTimer" type="Timer" parent="Group1"]
-wait_time = 9.48269
+wait_time = 6.51532
 one_shot = true
 
 [connection signal="animation_finished" from="Group1/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

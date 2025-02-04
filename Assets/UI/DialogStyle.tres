@@ -36,6 +36,8 @@ overrides = {}
 script = ExtResource("1_p4pla")
 scene = ExtResource("5_pkt17")
 overrides = {
+"box_color_custom": "Color(0, 0, 0, 0.392157)",
+"box_color_use_global": "false",
 "box_margin_bottom": "5.0",
 "box_size": "Vector2(450, 100)",
 "name_label_alignment": "2"
@@ -78,4 +80,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_p4pla")]([])
-metadata/_latest_layer = "11"
+metadata/_latest_layer = "13"
