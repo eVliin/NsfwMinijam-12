@@ -26,7 +26,7 @@
 
 ## Project Overview
 
-**Stockings Naughtymare** is a game where you awaken in a mysterious, eerie mansion after striking a dangerous deal with a Christmas spirit named Mary. The gameplay is driven by interactive dialogue, puzzle-solving, and smooth scene transitions. Dialogic 2 is used for dynamic narrative events, while Godot 4.3 powers the game’s core systems.
+**Stockings Naughtymare** is a game where you awaken in a mysterious, eerie mansion after striking a dangerous deal with a self-proclamed Christmas spirit named Mary. The gameplay is driven by interactive dialogue, puzzle-solving, and smooth scene transitions. Dialogic 2 is used for dynamic narrative events, while Godot 4.3 powers the game’s core systems.
 
 ---
 
